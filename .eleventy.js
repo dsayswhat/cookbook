@@ -1,4 +1,9 @@
 const markdownIt = require("markdown-it");
+const postcss = require("postcss");
+const tailwindcss = require("@tailwindcss/postcss");
+const autoprefixer = require("autoprefixer");
+const fs = require("fs");
+const path = require("path");
 
 module.exports = function(eleventyConfig) {
   // Add markdown support
@@ -9,12 +14,52 @@ module.exports = function(eleventyConfig) {
   });
   eleventyConfig.setLibrary("md", md);
 
+  // Process CSS with PostCSS
+  eleventyConfig.addTemplateFormats("css");
+  eleventyConfig.addExtension("css", {
+    outputFileExtension: "css",
+    compile: async function(inputContent, inputPath) {
+      if (inputPath.includes('/_site/')) {
+        return;
+      }
+      
+      if (!inputPath.endsWith("styles.css")) {
+        return () => inputContent;
+      }
+
+      return async () => {
+        const result = await postcss([
+          tailwindcss,
+          autoprefixer
+        ]).process(inputContent, {
+          from: inputPath,
+          to: path.join("_site", path.basename(inputPath))
+        });
+        return result.css;
+      };
+    }
+  });
+
+  // Add a limit filter for limiting collection items
+  eleventyConfig.addFilter("limit", function(array, limit) {
+    return array.slice(0, limit);
+  });
+
+  // Add a date filter for formatting dates
+  eleventyConfig.addFilter("date", function(date, format) {
+    if (format === "yyyy") {
+      return new Date().getFullYear();
+    }
+    return date ? new Date(date).toLocaleDateString() : new Date().toLocaleDateString();
+  });
+
   // Copy static assets
   eleventyConfig.addPassthroughCopy("src/assets");
 
   // Watch for changes in these directories
   eleventyConfig.addWatchTarget("src/_includes");
   eleventyConfig.addWatchTarget("src/recipes");
+  eleventyConfig.addWatchTarget("src/css");
 
   // Create a collection for all recipes
   eleventyConfig.addCollection("allRecipes", function(collection) {
@@ -59,7 +104,7 @@ module.exports = function(eleventyConfig) {
       includes: "_includes",
       data: "_data"
     },
-    templateFormats: ["njk", "md", "html"],
+    templateFormats: ["njk", "md", "html", "css"],
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
     dataTemplateEngine: "njk"

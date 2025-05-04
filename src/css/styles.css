@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+/* Custom theme configuration */
+@theme {
+  /* Colors */
+  --color-primary-50: oklch(0.98 0.02 240);  /* Very light grey-blue */
+  --color-primary-100: oklch(0.95 0.04 240);
+  --color-primary-200: oklch(0.90 0.06 240);
+  --color-primary-300: oklch(0.85 0.08 240);
+  --color-primary-400: oklch(0.80 0.10 240);
+  --color-primary-500: oklch(0.75 0.12 240);  /* Main brand color */
+  --color-primary-600: oklch(0.70 0.14 240);
+  --color-primary-700: oklch(0.65 0.16 240);
+  --color-primary-800: oklch(0.60 0.18 240);
+  --color-primary-900: oklch(0.55 0.20 240);
+  
+  /* Secondary green accent */
+  --color-accent-50: oklch(0.98 0.02 150);
+  --color-accent-100: oklch(0.95 0.04 150);
+  --color-accent-200: oklch(0.90 0.06 150);
+  --color-accent-300: oklch(0.85 0.08 150);
+  --color-accent-400: oklch(0.80 0.10 150);
+  --color-accent-500: oklch(0.75 0.12 150);  /* Main accent color */
+  --color-accent-600: oklch(0.70 0.14 150);
+  --color-accent-700: oklch(0.65 0.16 150);
+  --color-accent-800: oklch(0.60 0.18 150);
+  --color-accent-900: oklch(0.55 0.20 150);
+  
+  /* Typography */
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Georgia", ui-serif, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-display: var(--font-serif);
+  
+  /* Custom container sizes for recipe layout */
+  --container-recipe: 65ch;
+}
+
+/* Custom utilities */
+@utility container-recipe {
+  width: 100%;
+  max-width: var(--container-recipe);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Recipe Content Styling */
+.recipe .markdown-content {
+  /* Override heading styles */
+  & h1:not(:first-child) {
+    @apply text-3xl font-bold mt-8 mb-6 text-primary-700 font-display border-b border-primary-200 pb-2;
+  }
+  
+  /* Ingredients Section */
+  & h2:where(:has-text("Ingredients")) {
+    @apply text-2xl font-bold mt-8 mb-4 text-primary-600 font-display px-4 py-2 bg-primary-50 rounded-t-lg border-l-4 border-primary-400;
+  }
+  
+  & h2:where(:has-text("Ingredients")) + h3 {
+    @apply text-xl font-semibold px-4 py-2 bg-primary-50 border-l-4 border-primary-300 mt-0 mb-0;
+  }
+  
+  & h2:where(:has-text("Ingredients")) ~ ul {
+    @apply bg-primary-50 px-8 pt-4 pb-4 rounded-b-lg border-l-4 border-primary-200 mb-6 space-y-2;
+  }
+  
+  & h3:where(:has-text("Main Ingredients")),
+  & h3:where(:has-text("Optional")) {
+    @apply text-xl font-semibold px-4 py-2 bg-primary-50 border-l-4 border-primary-300 mt-6 mb-0;
+  }
+  
+  & h3:where(:has-text("Main Ingredients")) + ul,
+  & h3:where(:has-text("Optional")) + ul {
+    @apply bg-primary-50 px-8 pt-4 pb-4 rounded-b-lg border-l-4 border-primary-200 mb-6 space-y-2;
+  }
+  
+  /* Style all ingredient list items */
+  & h2:where(:has-text("Ingredients")) ~ ul li,
+  & h3:where(:has-text("Main Ingredients")) ~ ul li,
+  & h3:where(:has-text("Optional")) ~ ul li {
+    @apply relative pl-6;
+    
+    &::before {
+      content: "◯";
+      @apply absolute left-0 text-primary-500;
+    }
+    
+    &:hover::before {
+      content: "●";
+      @apply text-primary-600;
+    }
+  }
+  
+  /* Instructions Section */
+  & h2:where(:has-text("Instructions")) {
+    @apply text-2xl font-bold mt-8 mb-0 text-accent-600 font-display px-4 py-2 bg-accent-50 rounded-t-lg border-l-4 border-accent-400;
+  }
+  
+  & h2:where(:has-text("Instructions")) + ol {
+    @apply bg-accent-50 px-6 pt-4 pb-4 rounded-b-lg border-l-4 border-accent-200 mb-6 space-y-3;
+    list-style-type: decimal;
+  }
+  
+  & h2:where(:has-text("Instructions")) + ol li {
+    @apply pl-2 ml-6;
+    
+    &::marker {
+      @apply text-accent-600 font-bold;
+    }
+  }
+  
+  /* Instruction subsections */
+  & h3:where(:has-text("To")) {
+    @apply text-xl font-semibold mt-6 mb-0 text-accent-600 font-display px-4 py-2 bg-accent-50 rounded-t-lg border-l-4 border-accent-300;
+  }
+  
+  & h3:where(:has-text("To")) + ol {
+    @apply bg-accent-50 px-6 pt-4 pb-4 rounded-b-lg border-l-4 border-accent-200 mb-6 space-y-2;
+    list-style-type: decimal;
+  }
+  
+  /* Notes Section */
+  & h2:where(:has-text("Notes")) {
+    @apply text-2xl font-bold mt-8 mb-0 text-gray-700 font-display px-4 py-2 bg-gray-100 rounded-t-lg border-l-4 border-gray-400;
+  }
+  
+  & h2:where(:has-text("Notes")) + p,
+  & h2:where(:has-text("Notes")) + ul {
+    @apply bg-gray-100 px-8 pt-4 pb-4 rounded-b-lg border-l-4 border-gray-300 mb-6;
+  }
+  
+  & h2:where(:has-text("Notes")) + ul {
+    @apply space-y-2;
+  }
+  
+  & h2:where(:has-text("Notes")) + ul li {
+    @apply relative pl-6;
+    
+    &::before {
+      content: "•";
+      @apply absolute left-0 text-gray-500;
+    }
+  }
+}
+
+/* Mobile responsiveness for recipe content */
+@media (max-width: 640px) {
+  .recipe .markdown-content {
+    & h2:where(:has-text("Ingredients")) ~ ul,
+    & h3:where(:has-text("Main Ingredients")) + ul,
+    & h3:where(:has-text("Optional")) + ul,
+    & h2:where(:has-text("Instructions")) + ol,
+    & h3:where(:has-text("To")) + ol,
+    & h2:where(:has-text("Notes")) + p,
+    & h2:where(:has-text("Notes")) + ul {
+      @apply px-4;
+    }
+  }
+} 

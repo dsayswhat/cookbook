@@ -4,19 +4,31 @@
   "description": "A recipe management system with web and PDF output",
   "main": "index.js",
   "scripts": {
-    "start": "eleventy --serve",
+    "clean": "rimraf _site/",
+    "prebuild": "npm run clean",
     "build": "eleventy",
+    "prestart": "npm run clean",
+    "start": "eleventy --serve",
     "pdf": "node scripts/generate-pdfs.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["recipes", "cookbook", "eleventy"],
+  "keywords": [
+    "recipes",
+    "cookbook",
+    "eleventy"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "@tailwindcss/postcss": "^4.1.5",
+    "autoprefixer": "^10.4.16",
     "gray-matter": "^4.0.3",
     "js-yaml": "^4.1.0",
     "markdown-it": "^13.0.1",
-    "puppeteer": "^21.5.0"
+    "postcss": "^8.4.32",
+    "puppeteer": "^21.5.0",
+    "rimraf": "^5.0.5",
+    "tailwindcss": "^4.0.0"
   }
 }

@@ -4,22 +4,42 @@ title: All Recipes
 permalink: /recipes/index.html
 ---
 
-<h1>All Recipes</h1>
+<h1 class="text-3xl md:text-4xl font-display font-bold mb-6">All Recipes</h1>
 
-<div class="recipes-grid">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
   {% for recipe in collections.allRecipes %}
-    <article class="recipe-card">
-      <h2><a href="/recipe/{{ recipe.data.id }}/">{{ recipe.data.title }}</a></h2>
-      <div class="recipe-meta">
-        <span class="difficulty">{{ recipe.data.metadata.difficulty }}</span>
-        <span class="time">{{ recipe.data.timing.total }} minutes</span>
-        <span class="yield">{{ recipe.data.yield.amount }} {{ recipe.data.yield.unit }}</span>
+    <a href="/recipes/{{ recipe.data.id }}/" class="group">
+      <div class="bg-white shadow rounded-lg p-4 border border-gray-200 hover:shadow-md transition-shadow duration-200">
+        <h2 class="text-xl font-display font-semibold mb-2 text-primary-700 group-hover:text-primary-600">{{ recipe.data.title }}</h2>
+        
+        <div class="text-sm text-gray-600 mb-3">
+          {% if recipe.data.metadata.categories %}
+            <div class="mb-1">
+              <span class="font-medium">Categories:</span> {{ recipe.data.metadata.categories | join(", ") }}
+            </div>
+          {% endif %}
+          
+          {% if recipe.data.timing and recipe.data.timing.total %}
+            <div class="mb-1">
+              <span class="font-medium">Time:</span> {{ recipe.data.timing.total }} minutes
+            </div>
+          {% endif %}
+          
+          {% if recipe.data.metadata.difficulty %}
+            <div>
+              <span class="font-medium">Difficulty:</span> {{ recipe.data.metadata.difficulty }}
+            </div>
+          {% endif %}
+        </div>
+        
+        {% if recipe.data.metadata.tags %}
+          <div class="flex flex-wrap gap-1 mt-2">
+            {% for tag in recipe.data.metadata.tags %}
+              <span class="bg-gray-100 text-gray-700 px-2 py-1 text-xs rounded">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
       </div>
-      <div class="categories">
-        {% for category in recipe.data.metadata.categories %}
-          <span class="category">{{ category }}</span>
-        {% endfor %}
-      </div>
-    </article>
+    </a>
   {% endfor %}
 </div> 

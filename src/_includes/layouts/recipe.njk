@@ -1,36 +1,56 @@
 ---
 layout: layouts/base.njk
 ---
-<p>start of recipe.njk</p>
 <article class="recipe">
-  <header>
-    <h1>{{ title }}</h1>
-    <div class="recipe-meta">
+  <header class="mb-8">
+    <h1 class="text-3xl md:text-4xl font-display font-bold mb-4">{{ title }}</h1>
+    <div class="recipe-meta grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 bg-gray-100 p-4 rounded-lg">
       {% if metadata.categories %}
-        <div><strong>Categories:</strong> {{ metadata.categories | join(", ") }}</div>
+        <div class="flex items-center gap-1">
+          <span class="font-semibold">Categories:</span> 
+          <span>{{ metadata.categories | join(", ") }}</span>
+        </div>
       {% endif %}
       {% if metadata.cuisine %}
-        <div><strong>Cuisine:</strong> {{ metadata.cuisine }}</div>
+        <div class="flex items-center gap-1">
+          <span class="font-semibold">Cuisine:</span> 
+          <span>{{ metadata.cuisine }}</span>
+        </div>
       {% endif %}
       {% if metadata.tags %}
-        <div><strong>Tags:</strong> {{ metadata.tags | join(", ") }}</div>
+        <div class="flex items-center gap-1">
+          <span class="font-semibold">Tags:</span> 
+          <span>{{ metadata.tags | join(", ") }}</span>
+        </div>
       {% endif %}
       {% if metadata.difficulty %}
-        <div><strong>Difficulty:</strong> {{ metadata.difficulty }}</div>
+        <div class="flex items-center gap-1">
+          <span class="font-semibold">Difficulty:</span> 
+          <span>{{ metadata.difficulty }}</span>
+        </div>
       {% endif %}
       {% if timing and timing.total %}
-        <div><strong>Total Time:</strong> {{ timing.total }} minutes</div>
+        <div class="flex items-center gap-1">
+          <span class="font-semibold">Total Time:</span> 
+          <span>{{ timing.total }} minutes</span>
+        </div>
       {% endif %}
       {% if yield %}
-        <div><strong>Yield:</strong> {{ yield.amount }} {{ yield.unit }}</div>
+        <div class="flex items-center gap-1">
+          <span class="font-semibold">Yield:</span> 
+          <span>{{ yield.amount }} {{ yield.unit }}</span>
+        </div>
       {% endif %}
       {% if source_url %}
-        <div><strong>Source:</strong> <a href="{{ source_url }}">{{ source_url }}</a></div>
+        <div class="flex items-center gap-1 col-span-full">
+          <span class="font-semibold">Source:</span> 
+          <a href="{{ source_url }}" class="text-primary-600 hover:underline">{{ source_url }}</a>
+        </div>
       {% endif %}
     </div>
   </header>
 
-  <div class="markdown-content">
+  <div class="markdown-content prose prose-lg prose-stone max-w-none prose-headings:font-display prose-a:text-primary-600">
     {{ content | safe }}
   </div>
 </article> 

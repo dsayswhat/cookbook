@@ -4,7 +4,7 @@
 - **Static Site Generator**: Eleventy (11ty)
 - **Data Format**: Markdown with YAML frontmatter
 - **Template Language**: Nunjucks (primary), Liquid (alternative)
-- **Styling**: CSS (vanilla, considering utility framework)
+- **Styling**: Tailwind CSS v4 with custom theme variables
 - **JavaScript**: Minimal, vanilla JS for progressive enhancement
 - **Build Tools**: Node.js, npm
 - **PDF Generation**: Puppeteer (for automated PDF creation)
@@ -18,6 +18,8 @@
 
 # Key Dependencies
 - @11ty/eleventy
+- tailwindcss (v4)
+- @tailwindcss/postcss
 - puppeteer (for PDF generation)
 - markdown-it (for parsing notes/instructions)
 ```
@@ -34,4 +36,5 @@
 2. **File-based storage**: Each recipe is a separate markdown file
 3. **Collections in Eleventy**: Recipes organized by category/tag
 4. **Static generation**: All pages pre-built for speed
-5. **Puppeteer for PDFs**: Automated generation using print stylesheets 
+5. **Puppeteer for PDFs**: Automated generation using print stylesheets
+6. **Tailwind CSS v4**: Utility-first styling with custom theme variables 
