@@ -5,17 +5,18 @@
 src/
   _data/
     recipes/
-      [recipe-name].yml    # Individual recipe files
+      [recipe-name].md    # Individual recipe files with YAML frontmatter
 ```
 
-## YAML Recipe Schema
-```yaml
+## Recipe Format
+```markdown
+---
 id: unique-identifier
 title: Recipe Name
 metadata:
-  categories: []
+  categories: [Category1, Category2]
   cuisine: String
-  tags: []
+  tags: [tag1, tag2]
   difficulty: Easy|Medium|Hard
 timing:
   prep: Number (minutes)
@@ -36,6 +37,23 @@ instructions:
     time: Number (optional)
 notes: String (optional)
 source_url: String (optional)
+---
+
+# Recipe Title
+
+## Ingredients
+
+### Group Name (optional)
+- Amount Unit Item, notes
+
+## Instructions
+
+1. Step 1
+2. Step 2
+...
+
+## Notes
+Additional notes or variations
 ```
 
 ## Collection Structure
@@ -53,7 +71,8 @@ source_url: String (optional)
 ```
 /                          # Homepage
 /recipes/                  # All recipes
-/recipes/[recipe-id]/      # Individual recipe
+/recipe/[recipe-id]/       # Individual recipe (preferred but has frontmatter issues)
+/recipes/[recipe-id]/      # Individual recipe (currently working better with frontmatter)
 /categories/[category]/    # Recipes by category
 /tags/[tag]/              # Recipes by tag
 /recipes/[recipe-id].pdf  # PDF version

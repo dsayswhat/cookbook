@@ -1,62 +1,36 @@
 ---
 layout: layouts/base.njk
 ---
-
+<p>start of recipe.njk</p>
 <article class="recipe">
   <header>
     <h1>{{ title }}</h1>
     <div class="recipe-meta">
-      <span class="difficulty">{{ metadata.difficulty }}</span>
-      <span class="time">{{ timing.total }} minutes total</span>
-      <span class="yield">{{ yield.amount }} {{ yield.unit }}</span>
+      {% if metadata.categories %}
+        <div><strong>Categories:</strong> {{ metadata.categories | join(", ") }}</div>
+      {% endif %}
+      {% if metadata.cuisine %}
+        <div><strong>Cuisine:</strong> {{ metadata.cuisine }}</div>
+      {% endif %}
+      {% if metadata.tags %}
+        <div><strong>Tags:</strong> {{ metadata.tags | join(", ") }}</div>
+      {% endif %}
+      {% if metadata.difficulty %}
+        <div><strong>Difficulty:</strong> {{ metadata.difficulty }}</div>
+      {% endif %}
+      {% if timing and timing.total %}
+        <div><strong>Total Time:</strong> {{ timing.total }} minutes</div>
+      {% endif %}
+      {% if yield %}
+        <div><strong>Yield:</strong> {{ yield.amount }} {{ yield.unit }}</div>
+      {% endif %}
+      {% if source_url %}
+        <div><strong>Source:</strong> <a href="{{ source_url }}">{{ source_url }}</a></div>
+      {% endif %}
     </div>
   </header>
 
-  <section class="ingredients">
-    <h2>Ingredients</h2>
-    {% for group in ingredients %}
-      {% if group.group %}
-        <h3>{{ group.group }}</h3>
-      {% endif %}
-      <ul>
-        {% for item in group.items %}
-          <li>
-            {% if item.amount %}{{ item.amount }}{% endif %}
-            {% if item.unit %}{{ item.unit }}{% endif %}
-            {{ item.item }}
-            {% if item.notes %}({{ item.notes }}){% endif %}
-          </li>
-        {% endfor %}
-      </ul>
-    {% endfor %}
-  </section>
-
-  <section class="instructions">
-    <h2>Instructions</h2>
-    <ol>
-      {% for step in instructions %}
-        <li>{{ step.step }}</li>
-      {% endfor %}
-    </ol>
-  </section>
-
-  {% if notes %}
-    <section class="notes">
-      <h2>Notes</h2>
-      <p>{{ notes }}</p>
-    </section>
-  {% endif %}
-
-  {% if source_url %}
-    <footer>
-      <p>Source: <a href="{{ source_url }}">{{ source_url }}</a></p>
-    </footer>
-  {% endif %}
-
-  {# For markdown recipes, we'll use the content #}
-  {% if content %}
-    <div class="markdown-content">
-      {{ content | safe }}
-    </div>
-  {% endif %}
+  <div class="markdown-content">
+    {{ content | safe }}
+  </div>
 </article> 

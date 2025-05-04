@@ -2,7 +2,7 @@
 
 ## Technology Stack
 - **Static Site Generator**: Eleventy (11ty)
-- **Data Format**: YAML
+- **Data Format**: Markdown with YAML frontmatter
 - **Template Language**: Nunjucks (primary), Liquid (alternative)
 - **Styling**: CSS (vanilla, considering utility framework)
 - **JavaScript**: Minimal, vanilla JS for progressive enhancement
@@ -18,7 +18,6 @@
 
 # Key Dependencies
 - @11ty/eleventy
-- js-yaml (for YAML parsing)
 - puppeteer (for PDF generation)
 - markdown-it (for parsing notes/instructions)
 ```
@@ -27,12 +26,12 @@
 - Must work without JavaScript (progressive enhancement)
 - Should generate static HTML for performance
 - PDF generation happens at build time
-- All data stored in YAML files
+- All recipes stored in Markdown files with YAML frontmatter
 - No database required
 
 ## Architecture Decisions
-1. **YAML for recipes**: Human-readable, supports complex nested data
-2. **File-based storage**: Each recipe is a separate YAML file
+1. **Markdown for recipes**: Human-readable format with YAML metadata
+2. **File-based storage**: Each recipe is a separate markdown file
 3. **Collections in Eleventy**: Recipes organized by category/tag
 4. **Static generation**: All pages pre-built for speed
 5. **Puppeteer for PDFs**: Automated generation using print stylesheets 

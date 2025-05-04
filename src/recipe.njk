@@ -16,3 +16,4 @@ eleventyComputed:
   source_url: "{{ recipe.data.source_url }}"
 permalink: "recipe/{{ recipe.data.id }}/index.html"
 --- 
+{{ recipe.templateContent | safe }} 

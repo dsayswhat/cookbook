@@ -9,11 +9,12 @@
     "pdf": "node scripts/generate-pdfs.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["recipes", "cookbook", "eleventy", "yaml"],
+  "keywords": ["recipes", "cookbook", "eleventy"],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "gray-matter": "^4.0.3",
     "js-yaml": "^4.1.0",
     "markdown-it": "^13.0.1",
     "puppeteer": "^21.5.0"
