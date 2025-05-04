@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+title: All Recipes
+permalink: /recipes/index.html
+---
+
+<h1>All Recipes</h1>
+
+<div class="recipes-grid">
+  {% for recipe in collections.allRecipes %}
+    <article class="recipe-card">
+      <h2><a href="/recipe/{{ recipe.data.id }}/">{{ recipe.data.title }}</a></h2>
+      <div class="recipe-meta">
+        <span class="difficulty">{{ recipe.data.metadata.difficulty }}</span>
+        <span class="time">{{ recipe.data.timing.total }} minutes</span>
+        <span class="yield">{{ recipe.data.yield.amount }} {{ recipe.data.yield.unit }}</span>
+      </div>
+      <div class="categories">
+        {% for category in recipe.data.metadata.categories %}
+          <span class="category">{{ category }}</span>
+        {% endfor %}
+      </div>
+    </article>
+  {% endfor %}
+</div> 

@@ -16,3 +16,8 @@ You have two modes of operation:
 - You will move back to plan mode after every response and when the user types `PLAN`.
 - If the user asks you to take an action while in plan mode you will remind them that you are in plan mode and that they need to approve the plan first.
 - When in plan mode always output the full updated plan in every response.
+
+
+## Command Line preferences.
+
+My preference is to run git, npm and similar shell commands manually. Rather than running these as part of the actions taken by the Cursor agent, please recommend the commands for me to run manually. 

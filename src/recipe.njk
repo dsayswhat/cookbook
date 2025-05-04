@@ -1,0 +1,18 @@
+---
+layout: layouts/recipe.njk
+pagination:
+  data: collections.allRecipes
+  size: 1
+  alias: recipe
+  addAllPagesToCollections: true
+eleventyComputed:
+  title: "{{ recipe.data.title }}"
+  metadata: "{{ recipe.data.metadata }}"
+  timing: "{{ recipe.data.timing }}"
+  yield: "{{ recipe.data.yield }}"
+  ingredients: "{{ recipe.data.ingredients }}"
+  instructions: "{{ recipe.data.instructions }}"
+  notes: "{{ recipe.data.notes }}"
+  source_url: "{{ recipe.data.source_url }}"
+permalink: "recipe/{{ recipe.data.id }}/index.html"
+--- 
