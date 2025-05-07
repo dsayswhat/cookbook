@@ -45,6 +45,27 @@ Generate PDFs:
 npm run pdf
 ```
 
+### Deployment
+
+The project is set up for automatic deployment to GitHub Pages using GitHub Actions.
+
+#### Automatic Deployment
+Any push to the `main` branch will trigger the GitHub Actions workflow that:
+1. Builds the site with the correct path prefix for GitHub Pages
+2. Generates PDF files
+3. Deploys the build to the `gh-pages` branch
+
+#### Manual Deployment
+To build the site for GitHub Pages manually:
+```bash
+npm run build:github
+```
+
+To deploy manually (requires appropriate GitHub permissions):
+```bash
+npm run deploy
+```
+
 ## Project Structure
 
 ```

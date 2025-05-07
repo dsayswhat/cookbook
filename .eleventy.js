@@ -53,6 +53,30 @@ module.exports = function(eleventyConfig) {
     return date ? new Date(date).toLocaleDateString() : new Date().toLocaleDateString();
   });
 
+  // Add a filter to prepend the path prefix to URLs
+  eleventyConfig.addFilter("url", function(urlPath) {
+    // Determine if we're building for GitHub Pages
+    const isGitHubPages = process.env.GITHUB_ACTIONS === "true" || process.env.ELEVENTY_ENV === "github";
+    const pathPrefix = isGitHubPages ? "/cookbook" : "";
+    
+    // Handle undefined or non-string values
+    if (!urlPath || typeof urlPath !== "string") {
+      return urlPath;
+    }
+    
+    // Don't modify external URLs
+    if (urlPath.startsWith("http")) {
+      return urlPath;
+    }
+    
+    // Ensure URL starts with a slash
+    if (!urlPath.startsWith("/")) {
+      urlPath = "/" + urlPath;
+    }
+    
+    return `${pathPrefix}${urlPath}`;
+  });
+
   // Copy static assets
   eleventyConfig.addPassthroughCopy("src/assets");
 
@@ -97,6 +121,9 @@ module.exports = function(eleventyConfig) {
     return Array.from(tags).sort();
   });
 
+  // Determine if we're building for GitHub Pages
+  const isGitHubPages = process.env.GITHUB_ACTIONS === "true" || process.env.ELEVENTY_ENV === "github";
+  
   return {
     dir: {
       input: "src",
@@ -107,6 +134,8 @@ module.exports = function(eleventyConfig) {
     templateFormats: ["njk", "md", "html", "css"],
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
-    dataTemplateEngine: "njk"
+    dataTemplateEngine: "njk",
+    // Path prefix for GitHub Pages deployment
+    pathPrefix: isGitHubPages ? "/cookbook/" : "/"
   };
 };

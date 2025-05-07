@@ -10,7 +10,11 @@
     "prestart": "npm run clean",
     "start": "eleventy --serve",
     "pdf": "node scripts/generate-pdfs.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:github": "cross-env ELEVENTY_ENV=github eleventy",
+    "predeploy": "npm run clean",
+    "deploy": "npm run build:github",
+    "check-deployment": "node scripts/check-deployment.js"
   },
   "keywords": [
     "recipes",
@@ -23,6 +27,7 @@
     "@11ty/eleventy": "^2.0.1",
     "@tailwindcss/postcss": "^4.1.5",
     "autoprefixer": "^10.4.16",
+    "cross-env": "^7.0.3",
     "gray-matter": "^4.0.3",
     "js-yaml": "^4.1.0",
     "markdown-it": "^13.0.1",

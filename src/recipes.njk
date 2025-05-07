@@ -8,7 +8,7 @@ permalink: /recipes/index.html
 
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
   {% for recipe in collections.allRecipes %}
-    <a href="/recipes/{{ recipe.data.id }}/" class="group">
+    <a href="{{ '/recipes/' + recipe.data.id + '/' | url }}" class="group">
       <div class="bg-white shadow rounded-lg p-4 border border-gray-200 hover:shadow-md transition-shadow duration-200">
         <h2 class="text-xl font-display font-semibold mb-2 text-primary-700 group-hover:text-primary-600">{{ recipe.data.title }}</h2>
         

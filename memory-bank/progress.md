@@ -26,15 +26,18 @@
   - [x] Responsive design
   - [x] Component styling
   - [x] PostCSS integration
+- [x] Deployment configuration for GitHub Pages
+  - [x] Update Eleventy configuration for path prefixing
+  - [x] Create GitHub Actions workflow file
+  - [x] Update package.json with deployment scripts
+  - [x] Create deployment verification script
 
 ## In Progress
 - [ ] Recipe migration to JSON
 - [ ] Category/tag taxonomy pages
-- [ ] Deployment configuration for GitHub Pages
-  - [ ] Update Eleventy configuration for path prefixing
-  - [ ] Create GitHub Actions workflow file
-  - [ ] Update package.json with deployment scripts
-  - [ ] Test deployment
+- [ ] Deployment testing
+  - [ ] Test local build with GitHub Pages configuration
+  - [ ] Push changes to GitHub and verify deployment
 
 ## To Do
 - [ ] Create templates for category pages at `/recipes/categories/[category]/`
@@ -57,10 +60,10 @@
   - [ ] Add cache busting for assets
   - [ ] Optimize image loading
 - [ ] Deployment tasks
-  - [ ] Configure GitHub repository for GitHub Pages
-  - [ ] Set up GitHub Actions for automated deployment
+  - [x] Configure Eleventy for GitHub Pages
+  - [x] Set up GitHub Actions for automated deployment
   - [ ] Configure custom domain (if needed)
-  - [ ] Document deployment process
+  - [x] Document deployment process
 
 ## Technical Debt
 - Need comprehensive recipe format documentation
