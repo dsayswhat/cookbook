@@ -74,7 +74,8 @@ module.exports = function(eleventyConfig) {
       urlPath = "/" + urlPath;
     }
     
-    return `${pathPrefix}${urlPath}`;
+    // Correct handling of path prefix - ensure it's prepended
+    return pathPrefix + urlPath;
   });
 
   // Copy static assets
@@ -138,7 +139,7 @@ module.exports = function(eleventyConfig) {
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
     dataTemplateEngine: "njk",
-    // Path prefix for GitHub Pages deployment
-    pathPrefix: isGitHubPages ? "/cookbook/" : "/"
+    // Path prefix for GitHub Pages deployment - ensure consistency with the url filter
+    pathPrefix: isGitHubPages ? "/cookbook" : ""
   };
 };
