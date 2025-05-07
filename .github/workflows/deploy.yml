@@ -30,10 +30,10 @@ jobs:
         run: npm run build:github
         
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
         
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4  # Updated from v2 to v4
+        uses: actions/upload-pages-artifact@v3  # Updated from v2 to v4
         with:
           path: '_site'  # Use your actual build output directory here
           
