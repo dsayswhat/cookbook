@@ -168,4 +168,29 @@ The cookbook site uses a clean build process to prevent stale files from persist
    - Custom Tailwind theme variables are defined in `src/css/styles.css`
    - Utility classes are generated based on theme configuration
 
-This clean build approach ensures that removed or renamed files don't persist in the output directory, preventing confusion during development and testing. 
+This clean build approach ensures that removed or renamed files don't persist in the output directory, preventing confusion during development and testing.
+
+## Deployment Process
+The cookbook site uses GitHub Pages for deployment:
+
+1. **Deployment Workflow**
+   - GitHub Actions automates the deployment process
+   - Triggered on pushes to the main branch
+   - Builds the site with path prefix configuration
+   - Deploys to the `gh-pages` branch
+
+2. **Path Configuration**
+   - Eleventy's `pathPrefix` setting handles subdirectory hosting
+   - All internal links use this prefix for GitHub Pages compatibility
+   - Local development remains at root path for convenience
+
+3. **Deployment Scripts**
+   - `npm run build:github` - Builds the site with GitHub Pages path prefix
+   - GitHub Actions handles the actual deployment to `gh-pages` branch
+
+4. **Build Artifacts**
+   - Static HTML, CSS, and JavaScript files in `_site` directory
+   - PDF files generated during build process
+   - Asset files (images, fonts) copied to output directory
+
+This deployment approach enables automated publishing while maintaining a clean separation between source code and published output. 

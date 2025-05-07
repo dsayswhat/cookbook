@@ -34,6 +34,11 @@ Using Markdown with YAML frontmatter for recipe files. Core collections (recipes
    - Add print-specific styles for PDF generation
    - Refine typography and spacing for better readability
    - Optimize UI for mobile devices
+7. Deploy to GitHub Pages
+   - Configure Eleventy for GitHub Pages path prefix
+   - Create GitHub Actions workflow for automated deployment
+   - Update build scripts to support deployment
+   - Test deployment to ensure all links and assets function correctly
 
 ## Blockers
 - None at this time
@@ -49,6 +54,10 @@ Using Markdown with YAML frontmatter for recipe files. Core collections (recipes
   - Configured custom theme variables for colors, typography, and spacing
   - Created custom utility for recipe container sizing
   - Implemented responsive layouts for all pages
+- GitHub Pages will be used for deployment
+  - Will use project pages approach with a `gh-pages` branch
+  - Will implement GitHub Actions workflow for automated deployment
+  - Will configure path prefixing to handle subdirectory hosting
 
 ## Questions/Considerations
 1. Should PDF generation happen at build time or on-demand?
@@ -61,3 +70,5 @@ Using Markdown with YAML frontmatter for recipe files. Core collections (recipes
 8. Should we implement a "related recipes" feature based on shared categories/tags?
 9. Do we need to add more complex Tailwind components for specific UI elements?
 10. How should we organize and optimize styling for print output? 
+11. Should we set up a custom domain for the GitHub Pages site?
+12. How to handle environment-specific configuration between local development and GitHub Pages? 

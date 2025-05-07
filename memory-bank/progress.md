@@ -30,6 +30,11 @@
 ## In Progress
 - [ ] Recipe migration to JSON
 - [ ] Category/tag taxonomy pages
+- [ ] Deployment configuration for GitHub Pages
+  - [ ] Update Eleventy configuration for path prefixing
+  - [ ] Create GitHub Actions workflow file
+  - [ ] Update package.json with deployment scripts
+  - [ ] Test deployment
 
 ## To Do
 - [ ] Create templates for category pages at `/recipes/categories/[category]/`
@@ -51,7 +56,11 @@
   - [x] Implement clean build process
   - [ ] Add cache busting for assets
   - [ ] Optimize image loading
-- [ ] Deployment configuration
+- [ ] Deployment tasks
+  - [ ] Configure GitHub repository for GitHub Pages
+  - [ ] Set up GitHub Actions for automated deployment
+  - [ ] Configure custom domain (if needed)
+  - [ ] Document deployment process
 
 ## Technical Debt
 - Need comprehensive recipe format documentation
@@ -60,9 +69,11 @@
 - Need to implement proper error handling for YAML parsing
 - Should add documentation for collection usage
 - Need to standardize recipe metadata structure
+- Should establish a deployment validation process
 
 ## Known Issues
 - PDF generation approach needs testing
 - Image optimization strategy not defined
 - Search implementation method undecided
-- Need to handle missing metadata gracefully in collections 
+- Need to handle missing metadata gracefully in collections
+- Path prefixing for GitHub Pages may require URL adjustments 
