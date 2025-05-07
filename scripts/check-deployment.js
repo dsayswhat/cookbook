@@ -26,12 +26,22 @@ console.log(`GitHub Pages build script exists: ${githubBuildScriptExists ? '✅'
 const crossEnvInstalled = packageJson.devDependencies && packageJson.devDependencies['cross-env'];
 console.log(`cross-env dependency installed: ${crossEnvInstalled ? '✅' : '❌'}`);
 
-// Check if _site directory exists (build has been run)
+// Check if the .nojekyll file exists in the source directory
+const noJekyllSrcExists = fs.existsSync(path.join(__dirname, '..', 'src', '.nojekyll'));
+console.log(`.nojekyll file exists in src directory: ${noJekyllSrcExists ? '✅' : '❌'}`);
+
+// Check if the .nojekyll file exists in the _site directory (if _site exists)
 const siteDirectoryExists = fs.existsSync(path.join(__dirname, '..', '_site'));
+let noJekyllBuildExists = false;
+if (siteDirectoryExists) {
+  noJekyllBuildExists = fs.existsSync(path.join(__dirname, '..', '_site', '.nojekyll'));
+  console.log(`.nojekyll file exists in _site directory: ${noJekyllBuildExists ? '✅' : '❌'}`);
+}
 console.log(`_site directory exists: ${siteDirectoryExists ? '✅' : '❌'}`);
 
 // Overall check
-const allChecksPass = workflowExists && pathPrefixConfigured && githubBuildScriptExists && crossEnvInstalled;
+const allChecksPass = workflowExists && pathPrefixConfigured && githubBuildScriptExists && 
+                      crossEnvInstalled && noJekyllSrcExists && (!siteDirectoryExists || noJekyllBuildExists);
 console.log('\nDeployment configuration status:');
 console.log(allChecksPass ? '✅ All checks passed. Ready for deployment!' : '❌ Some checks failed. Please fix the issues before deploying.');
 

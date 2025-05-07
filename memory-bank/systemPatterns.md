@@ -183,14 +183,23 @@ The cookbook site uses GitHub Pages for deployment:
    - Eleventy's `pathPrefix` setting handles subdirectory hosting
    - All internal links use this prefix for GitHub Pages compatibility
    - Local development remains at root path for convenience
+   - Custom URL filter used to apply the path prefix consistently
 
-3. **Deployment Scripts**
+3. **GitHub Pages Configuration**
+   - `.nojekyll` file prevents GitHub's Jekyll processor from running
+   - This is crucial as Jekyll ignores folders starting with underscore by default
+   - GitHub Pages serves the site as static files without processing
+   - Folder structure preserved exactly as built by Eleventy
+
+4. **Deployment Scripts**
    - `npm run build:github` - Builds the site with GitHub Pages path prefix
+   - `npm run check-deployment` - Validates deployment configuration
    - GitHub Actions handles the actual deployment to `gh-pages` branch
 
-4. **Build Artifacts**
+5. **Build Artifacts**
    - Static HTML, CSS, and JavaScript files in `_site` directory
    - PDF files generated during build process
    - Asset files (images, fonts) copied to output directory
+   - `.nojekyll` file copied to output directory
 
 This deployment approach enables automated publishing while maintaining a clean separation between source code and published output. 

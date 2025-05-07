@@ -79,6 +79,9 @@ module.exports = function(eleventyConfig) {
 
   // Copy static assets
   eleventyConfig.addPassthroughCopy("src/assets");
+  
+  // Copy .nojekyll file to prevent GitHub Pages from using Jekyll
+  eleventyConfig.addPassthroughCopy("src/.nojekyll");
 
   // Watch for changes in these directories
   eleventyConfig.addWatchTarget("src/_includes");

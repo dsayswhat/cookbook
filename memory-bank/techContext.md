@@ -32,6 +32,7 @@
 - All recipes stored in Markdown files with YAML frontmatter
 - No database required
 - GitHub Pages deployment requires path prefixing for subdirectory hosting
+- `.nojekyll` file required to prevent GitHub's Jekyll processor from ignoring underscore folders
 
 ## Architecture Decisions
 1. **Markdown for recipes**: Human-readable format with YAML metadata
@@ -41,4 +42,5 @@
 5. **Puppeteer for PDFs**: Automated generation using print stylesheets
 6. **Tailwind CSS v4**: Utility-first styling with custom theme variables 
 7. **GitHub Pages**: Deployment to GitHub Pages using GitHub Actions
-8. **Path Prefixing**: Configure Eleventy to handle subdirectory path on GitHub Pages 
+8. **Path Prefixing**: Configure Eleventy to handle subdirectory path on GitHub Pages
+9. **`.nojekyll` file**: Prevents GitHub from processing the site with Jekyll 

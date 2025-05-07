@@ -52,13 +52,22 @@ The project is set up for automatic deployment to GitHub Pages using GitHub Acti
 #### Automatic Deployment
 Any push to the `main` branch will trigger the GitHub Actions workflow that:
 1. Builds the site with the correct path prefix for GitHub Pages
-2. Generates PDF files
-3. Deploys the build to the `gh-pages` branch
+2. Deploys the build to the `gh-pages` branch
+
+Important files for GitHub Pages deployment:
+- `.github/workflows/deploy.yml` - GitHub Actions workflow configuration
+- `.nojekyll` - Prevents GitHub from processing the site with Jekyll
+- Path prefixes in `.eleventy.js` ensure URLs work correctly within the GitHub Pages subdirectory
 
 #### Manual Deployment
 To build the site for GitHub Pages manually:
 ```bash
 npm run build:github
+```
+
+To check if your deployment configuration is correct:
+```bash
+npm run check-deployment
 ```
 
 To deploy manually (requires appropriate GitHub permissions):
@@ -76,6 +85,7 @@ src/
     layouts/       # Layout templates
     components/    # Reusable components
   assets/          # Static assets (images, CSS, JS)
+  .nojekyll        # Prevents GitHub Pages from using Jekyll
 ```
 
 ## License

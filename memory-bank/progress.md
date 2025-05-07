@@ -31,6 +31,8 @@
   - [x] Create GitHub Actions workflow file
   - [x] Update package.json with deployment scripts
   - [x] Create deployment verification script
+  - [x] Add `.nojekyll` file to prevent Jekyll processing
+  - [x] Update deployment check script to verify `.nojekyll` file
 
 ## In Progress
 - [ ] Recipe migration to JSON
