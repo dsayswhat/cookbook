@@ -1,7 +1,7 @@
 # Active Context
 
 ## Current State
-Using Markdown with YAML frontmatter for recipe files. Core collections (recipes, categories, tags) configured. Layout system implemented with Tailwind CSS v4 for styling. URL structure has been standardized to use consistently pluralized paths. Fixed permalink conflicts by setting `permalink: false` in recipe markdown files. Implemented clean build process to prevent stale files between builds. Added GitHub Pages deployment configuration with automated GitHub Actions workflow.
+Using Markdown with YAML frontmatter for recipe files. Core collections (recipes, categories, tags) configured. Layout system implemented with direct CSS styling, but maintaining Tailwind CSS v4 as the base framework. Refactored recipe template with semantic HTML structure and clean class naming conventions. Implemented incremental styling approach for the recipe template with responsive design and print styles. URL structure has been standardized to use consistently pluralized paths. Fixed permalink conflicts by setting `permalink: false` in recipe markdown files. Implemented clean build process to prevent stale files between builds. Added GitHub Pages deployment configuration with automated GitHub Actions workflow.
 
 ## Next Steps
 1. ✓ Complete layout system implementation
@@ -30,10 +30,12 @@ Using Markdown with YAML frontmatter for recipe files. Core collections (recipes
    - Create cuisine listing page
    - Create filtered views for each taxonomy
 6. Enhance styling and UI
-   - ✓ Implement responsive design with Tailwind CSS
-   - Add print-specific styles for PDF generation
-   - Refine typography and spacing for better readability
-   - Optimize UI for mobile devices
+   - ✓ Implement responsive design
+   - ✓ Clean up recipe template HTML structure
+   - ✓ Implement semantic class naming
+   - ✓ Add print-specific styles for PDF generation
+   - ✓ Refine typography and spacing for better readability
+   - ✓ Optimize UI for mobile devices
 7. ✓ Deploy to GitHub Pages
    - ✓ Configure Eleventy for GitHub Pages path prefix
    - ✓ Create GitHub Actions workflow for automated deployment
@@ -44,13 +46,22 @@ Using Markdown with YAML frontmatter for recipe files. Core collections (recipes
 - None at this time
 
 ## Recent Decisions
+- Recipe template has been refactored with semantic HTML structure
+  - Removed Tailwind utility classes from the template
+  - Implemented BEM-like naming convention for classes
+  - Created maintainable, component-based CSS structure
+- CSS styling approach changed to incremental, component-based styling
+  - Maintained Tailwind CSS framework for base styles
+  - Added direct CSS rules for recipe components
+  - Implemented responsive design with media queries
+  - Added print styles for PDF generation
 - URL structure will use consistently pluralized paths (`/recipes/`, `/categories/`, `/tags/`, etc.)
 - Individual recipe files will use `permalink: false` to avoid conflicts with the paginated template
 - Implemented clean build process using rimraf to prevent stale files between builds
   - Added `clean` script to remove output directory
   - Added pre-build hooks to ensure clean builds
   - Updated development workflow to clean before serving
-- Selected Tailwind CSS v4 as the styling framework
+- Selected Tailwind CSS v4 as the base styling framework
   - Configured custom theme variables for colors, typography, and spacing
   - Created custom utility for recipe container sizing
   - Implemented responsive layouts for all pages
@@ -69,7 +80,7 @@ Using Markdown with YAML frontmatter for recipe files. Core collections (recipes
 6. Should we implement a recipe editor interface?
 7. What type of navigation would be most user-friendly for the recipe categories/tags/cuisines?
 8. Should we implement a "related recipes" feature based on shared categories/tags?
-9. Do we need to add more complex Tailwind components for specific UI elements?
-10. How should we organize and optimize styling for print output? 
-11. Should we set up a custom domain for the GitHub Pages site?
-12. How to handle environment-specific configuration between local development and GitHub Pages? 
+9. How to further optimize print styles for better PDF output?
+10. Should we set up a custom domain for the GitHub Pages site?
+11. How to handle environment-specific configuration between local development and GitHub Pages?
+12. Should we implement a jump-to-section navigation for longer recipes? 

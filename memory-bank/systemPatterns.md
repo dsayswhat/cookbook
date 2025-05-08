@@ -115,39 +115,40 @@ The main navigation provides access to key content sections:
 - Print-optimized layouts 
 
 ## Styling Patterns
-The project uses Tailwind CSS v4 with a custom design system:
+The project uses a hybrid styling approach:
 
-1. **Theme Variables**
-   - Custom colors through `--color-primary-*` variables
+1. **Base Framework**
+   - Tailwind CSS v4 for global styles and utility classes
+   - Custom theme variables through Tailwind's `@theme` directive
+   - PostCSS for processing
+
+2. **Recipe Template Styling**
+   - Component-based CSS with BEM-like naming convention
+   - Semantic class names (e.g., `recipe-meta`, `recipe-content`)
+   - Direct CSS rules for recipe-specific components
+   - Responsive design with media queries
+   - Print styles for PDF generation
+
+3. **Design System**
+   - Custom colors through `--color-primary-*` and `--color-accent-*` variables
    - Typography settings with `--font-*` variables
    - Custom container sizes with `--container-*` variables
+   - Component-specific styling with semantic classes
 
-2. **Custom Utilities**
-   - `container-recipe` for content container with appropriate reading width
-   - Typography utilities leveraging the font variables
-
-3. **Responsive Patterns**
-   - Mobile-first design
+4. **Responsive Patterns**
+   - Mobile-first design principles
    - Grid layouts that adapt from single column to multi-column
-   - Stacked metadata on mobile, grid on larger screens
-   - Responsive typography with `md:text-*` utilities
+   - Media queries for different screen sizes:
+     - Mobile (max-width: 640px)
+     - Tablet (min-width: 768px)
+     - Desktop (min-width: 1024px)
+   - Print media query for print and PDF styling
 
-4. **Component Design**
-   - Card-based UI for recipe listings
-   - Clean, readable layout for recipe details
-   - Consistent header and footer patterns
-   - Metadata displayed in a structured format
-
-5. **Interactive Elements**
-   - Hover states for links and buttons
-   - Group hover for card elements
-   - Transition effects for smooth interactions
-
-6. **Color System**
-   - Primary color for main branding elements
-   - Gray scale for neutral backgrounds and text
-   - High contrast for readability
-   - Consistent use of colors for specific UI purposes
+5. **Class Naming Convention**
+   - Component-based: `component-element-modifier`
+   - Recipe components: `recipe-*`
+   - Metadata items: `recipe-meta-item`, `recipe-meta-label`, `recipe-meta-value`
+   - Recipe content: `recipe-content`
 
 ## Build Process
 The cookbook site uses a clean build process to prevent stale files from persisting between builds:
