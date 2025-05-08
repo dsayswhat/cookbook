@@ -2,55 +2,64 @@
 layout: layouts/base.njk
 ---
 <article class="recipe">
-  <header class="mb-8">
-    <h1 class="text-3xl md:text-4xl font-display font-bold mb-4">{{ title }}</h1>
-    <div class="recipe-meta grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 bg-gray-100 p-4 rounded-lg">
+  <header class="recipe-header">
+    <h1 class="recipe-title">{{ title }}</h1>
+    
+    <div class="recipe-meta">
       {% if metadata.categories %}
-        <div class="flex items-center gap-1">
-          <span class="font-semibold">Categories:</span> 
-          <span>{{ metadata.categories | join(", ") }}</span>
+        <div class="recipe-meta-item recipe-categories">
+          <span class="recipe-meta-label">Categories:</span> 
+          <span class="recipe-meta-value">{{ metadata.categories | join(", ") }}</span>
         </div>
       {% endif %}
+      
       {% if metadata.cuisine %}
-        <div class="flex items-center gap-1">
-          <span class="font-semibold">Cuisine:</span> 
-          <span>{{ metadata.cuisine }}</span>
+        <div class="recipe-meta-item recipe-cuisine">
+          <span class="recipe-meta-label">Cuisine:</span> 
+          <span class="recipe-meta-value">{{ metadata.cuisine }}</span>
         </div>
       {% endif %}
+      
       {% if metadata.tags %}
-        <div class="flex items-center gap-1">
-          <span class="font-semibold">Tags:</span> 
-          <span>{{ metadata.tags | join(", ") }}</span>
+        <div class="recipe-meta-item recipe-tags">
+          <span class="recipe-meta-label">Tags:</span> 
+          <span class="recipe-meta-value">{{ metadata.tags | join(", ") }}</span>
         </div>
       {% endif %}
+      
       {% if metadata.difficulty %}
-        <div class="flex items-center gap-1">
-          <span class="font-semibold">Difficulty:</span> 
-          <span>{{ metadata.difficulty }}</span>
+        <div class="recipe-meta-item recipe-difficulty">
+          <span class="recipe-meta-label">Difficulty:</span> 
+          <span class="recipe-meta-value">{{ metadata.difficulty }}</span>
         </div>
       {% endif %}
+      
       {% if timing and timing.total %}
-        <div class="flex items-center gap-1">
-          <span class="font-semibold">Total Time:</span> 
-          <span>{{ timing.total }} minutes</span>
+        <div class="recipe-meta-item recipe-time">
+          <span class="recipe-meta-label">Total Time:</span> 
+          <span class="recipe-meta-value">{{ timing.total }} minutes</span>
         </div>
       {% endif %}
+      
       {% if yield %}
-        <div class="flex items-center gap-1">
-          <span class="font-semibold">Yield:</span> 
-          <span>{{ yield.amount }} {{ yield.unit }}</span>
+        <div class="recipe-meta-item recipe-yield">
+          <span class="recipe-meta-label">Yield:</span> 
+          <span class="recipe-meta-value">{{ yield.amount }} {{ yield.unit }}</span>
         </div>
       {% endif %}
+      
       {% if source_url %}
-        <div class="flex items-center gap-1 col-span-full">
-          <span class="font-semibold">Source:</span> 
-          <a href="{{ source_url }}" class="text-primary-600 hover:underline">{{ source_url }}</a>
+        <div class="recipe-meta-item recipe-source">
+          <span class="recipe-meta-label">Source:</span> 
+          <a href="{{ source_url }}" class="recipe-source-link">{{ source_url }}</a>
         </div>
       {% endif %}
     </div>
   </header>
 
-  <div class="markdown-content prose prose-lg prose-stone max-w-none prose-headings:font-display prose-a:text-primary-600">
+  <div class="recipe-content">
     {{ content | safe }}
   </div>
 </article> 
+
+

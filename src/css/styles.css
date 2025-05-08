@@ -46,107 +46,180 @@
   padding-right: 1rem;
 }
 
+/* Recipe Styling - Container and Layout */
+.recipe {
+  max-width: var(--container-recipe);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.recipe-header {
+  margin-bottom: 2rem;
+}
+
+.recipe-title {
+  font-family: var(--font-display);
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+/* Recipe Metadata Styling */
+.recipe-meta {
+  background-color: #f3f4f6; /* Light gray background */
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.recipe-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.recipe-meta-label {
+  font-weight: 600;
+}
+
+.recipe-meta-value {
+  color: #4b5563; /* Gray 600 */
+}
+
+.recipe-source {
+  grid-column: 1 / -1; /* Full width for source */
+}
+
+.recipe-source-link {
+  color: var(--color-primary-600);
+  text-decoration: none;
+}
+
+.recipe-source-link:hover {
+  text-decoration: underline;
+}
+
 /* Recipe Content Styling */
-.recipe .markdown-content {
-  /* Override heading styles */
-  & h1:not(:first-child) {
-    @apply text-3xl font-bold mt-8 mb-6 text-primary-700 font-display border-b border-primary-200 pb-2;
+.recipe-content {
+  margin-top: 2rem;
+  line-height: 1.6;
+}
+
+/* Headings */
+.recipe-content h1 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1.5rem 0 1rem;
+  color: #111827; /* Gray 900 */
+}
+
+.recipe-content h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1.5rem 0 1rem;
+  color: #111827; /* Gray 900 */
+  border-bottom: 1px solid #e5e7eb; /* Gray 200 */
+  padding-bottom: 0.5rem;
+}
+
+.recipe-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 1.25rem 0 0.75rem;
+  color: #374151; /* Gray 700 */
+}
+
+/* Lists for ingredients */
+.recipe-content ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.recipe-content ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Ordered lists for instructions */
+.recipe-content ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  list-style-type: decimal;
+}
+
+.recipe-content ol li {
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+}
+
+/* Paragraphs */
+.recipe-content p {
+  margin-bottom: 1rem;
+}
+
+/* Links */
+.recipe-content a {
+  color: var(--color-primary-600);
+  text-decoration: none;
+}
+
+.recipe-content a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive layout for metadata */
+@media (min-width: 768px) {
+  .recipe-meta {
+    grid-template-columns: repeat(2, 1fr);
   }
   
-  /* Ingredients Section */
-  & h2:where(:has-text("Ingredients")) {
-    @apply text-2xl font-bold mt-8 mb-4 text-primary-600 font-display px-4 py-2 bg-primary-50 rounded-t-lg border-l-4 border-primary-400;
+  .recipe-title {
+    font-size: 2.25rem;
   }
-  
-  & h2:where(:has-text("Ingredients")) + h3 {
-    @apply text-xl font-semibold px-4 py-2 bg-primary-50 border-l-4 border-primary-300 mt-0 mb-0;
-  }
-  
-  & h2:where(:has-text("Ingredients")) ~ ul {
-    @apply bg-primary-50 px-8 pt-4 pb-4 rounded-b-lg border-l-4 border-primary-200 mb-6 space-y-2;
-  }
-  
-  & h3:where(:has-text("Main Ingredients")),
-  & h3:where(:has-text("Optional")) {
-    @apply text-xl font-semibold px-4 py-2 bg-primary-50 border-l-4 border-primary-300 mt-6 mb-0;
-  }
-  
-  & h3:where(:has-text("Main Ingredients")) + ul,
-  & h3:where(:has-text("Optional")) + ul {
-    @apply bg-primary-50 px-8 pt-4 pb-4 rounded-b-lg border-l-4 border-primary-200 mb-6 space-y-2;
-  }
-  
-  /* Style all ingredient list items */
-  & h2:where(:has-text("Ingredients")) ~ ul li,
-  & h3:where(:has-text("Main Ingredients")) ~ ul li,
-  & h3:where(:has-text("Optional")) ~ ul li {
-    @apply relative pl-6;
-    
-    &::before {
-      content: "◯";
-      @apply absolute left-0 text-primary-500;
-    }
-    
-    &:hover::before {
-      content: "●";
-      @apply text-primary-600;
-    }
-  }
-  
-  /* Instructions Section */
-  & h2:where(:has-text("Instructions")) {
-    @apply text-2xl font-bold mt-8 mb-0 text-accent-600 font-display px-4 py-2 bg-accent-50 rounded-t-lg border-l-4 border-accent-400;
-  }
-  
-  & h2:where(:has-text("Instructions")) + ol {
-    @apply bg-accent-50 px-6 pt-4 pb-4 rounded-b-lg border-l-4 border-accent-200 mb-6 space-y-3;
-    list-style-type: decimal;
-  }
-  
-  & h2:where(:has-text("Instructions")) + ol li {
-    @apply pl-2 ml-6;
-    
-    &::marker {
-      @apply text-accent-600 font-bold;
-    }
-  }
-  
-  /* Instruction subsections */
-  & h3:where(:has-text("To")) {
-    @apply text-xl font-semibold mt-6 mb-0 text-accent-600 font-display px-4 py-2 bg-accent-50 rounded-t-lg border-l-4 border-accent-300;
-  }
-  
-  & h3:where(:has-text("To")) + ol {
-    @apply bg-accent-50 px-6 pt-4 pb-4 rounded-b-lg border-l-4 border-accent-200 mb-6 space-y-2;
-    list-style-type: decimal;
-  }
-  
-  /* Notes Section */
-  & h2:where(:has-text("Notes")) {
-    @apply text-2xl font-bold mt-8 mb-0 text-gray-700 font-display px-4 py-2 bg-gray-100 rounded-t-lg border-l-4 border-gray-400;
-  }
-  
-  & h2:where(:has-text("Notes")) + p,
-  & h2:where(:has-text("Notes")) + ul {
-    @apply bg-gray-100 px-8 pt-4 pb-4 rounded-b-lg border-l-4 border-gray-300 mb-6;
-  }
-  
-  & h2:where(:has-text("Notes")) + ul {
-    @apply space-y-2;
-  }
-  
-  & h2:where(:has-text("Notes")) + ul li {
-    @apply relative pl-6;
-    
-    &::before {
-      content: "•";
-      @apply absolute left-0 text-gray-500;
-    }
+}
+
+@media (min-width: 1024px) {
+  .recipe-meta {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 /* Mobile responsiveness for recipe content */
 @media (max-width: 640px) {
+  .recipe {
+    padding: 0.75rem;
+  }
+  
+  .recipe-content ul,
+  .recipe-content ol {
+    padding-left: 1.25rem;
+  }
+  
+  .recipe-meta-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+  
+  .recipe-title {
+    font-size: 1.5rem;
+  }
+  
+  .recipe-content h2 {
+    font-size: 1.25rem;
+  }
+  
+  .recipe-content h3 {
+    font-size: 1.125rem;
+  }
+  
+  /* Keep for backward compatibility */
   .recipe .markdown-content {
     & h2:where(:has-text("Ingredients")) ~ ul,
     & h3:where(:has-text("Main Ingredients")) + ul,
@@ -157,5 +230,44 @@
     & h2:where(:has-text("Notes")) + ul {
       @apply px-4;
     }
+  }
+}
+
+/* Print styles for recipes */
+@media print {
+  .recipe {
+    max-width: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .recipe-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .recipe-meta {
+    background-color: transparent;
+    border: 1px solid #e5e7eb;
+    padding: 0.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .recipe-content {
+    margin-top: 1rem;
+  }
+  
+  /* Optimize page breaks */
+  .recipe-content h2 {
+    break-after: avoid;
+  }
+  
+  .recipe-content li {
+    break-inside: avoid;
+  }
+  
+  /* Hide unnecessary elements for print */
+  header, footer, nav {
+    display: none;
   }
 } 
