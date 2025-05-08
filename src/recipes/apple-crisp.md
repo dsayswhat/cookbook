@@ -10,8 +10,6 @@ metadata:
 source_url: 
 ---
 
-# Classic Apple Crisp
-
 ## Ingredients
 
 ### Filling

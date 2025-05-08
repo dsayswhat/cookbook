@@ -10,7 +10,7 @@ metadata:
 source_url: https://www.seriouseats.com/classic-sage-and-sausage-stuffing-or-dressing-recipe
 ---
 
-# Classic Sage and Sausage Stuffing (Dressing)
+
 
 ## Ingredients
 

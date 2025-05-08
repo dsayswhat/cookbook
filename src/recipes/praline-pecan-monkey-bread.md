@@ -10,8 +10,6 @@ metadata:
 source_url: 
 ---
 
-# Praline Pecan Monkey Bread Using Rhodes Frozen Yeast Rolls
-
 ## Ingredients
 
 ### Bread

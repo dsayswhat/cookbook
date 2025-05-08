@@ -10,8 +10,6 @@ metadata:
 source_url: 
 ---
 
-# Chicken Parmesan
-
 ## Ingredients
 
 ### Main Ingredients

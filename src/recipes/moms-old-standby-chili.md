@@ -10,7 +10,6 @@ metadata:
 source_url: 
 ---
 
-# Mom's Old Standby Chili
 
 ## Ingredients
 

@@ -10,7 +10,6 @@ metadata:
 source_url: 
 ---
 
-# Deviled Eggs
 
 ## Ingredients
 

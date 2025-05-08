@@ -10,7 +10,6 @@ metadata:
 source_url: 
 ---
 
-# Lemon Curd
 
 ## Ingredients
 

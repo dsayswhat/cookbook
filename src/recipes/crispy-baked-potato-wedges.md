@@ -10,7 +10,7 @@ metadata:
 source_url: https://seriouseats.com/crispy-baked-potato-wedges
 ---
 
-# Crispy Baked Potato Wedges
+
 
 ## Ingredients
 

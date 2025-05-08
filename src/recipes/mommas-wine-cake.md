@@ -10,7 +10,6 @@ metadata:
 source_url: https://allrecipes.com
 ---
 
-# Momma's Wine Cake
 
 ## Ingredients
 

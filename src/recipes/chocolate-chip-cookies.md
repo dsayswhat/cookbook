@@ -10,8 +10,6 @@ metadata:
 source_url: https://example.com/classic-chocolate-chip-cookies
 ---
 
-# Classic Chocolate Chip Cookies
-
 ## Ingredients
 
 ### Dry Ingredients

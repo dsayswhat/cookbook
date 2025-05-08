@@ -10,8 +10,6 @@ metadata:
 source_url: http://www.mycookbook.net/Recipe_Print.asp?RecipeID=158
 ---
 
-# Carrots Browned with Garlic
-
 ## Ingredients
 
 ### Main Ingredients

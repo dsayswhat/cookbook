@@ -10,7 +10,6 @@ metadata:
 source_url: https://www.bonappetit.com/recipe/quick-pickled-red-onions
 ---
 
-# Quick-Pickled Red Onions
 
 ## Ingredients
 

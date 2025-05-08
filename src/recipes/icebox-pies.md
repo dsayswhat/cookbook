@@ -10,7 +10,6 @@ metadata:
 source_url: 
 ---
 
-# Icebox Pies - Lemonade and Chocolate Versions
 
 These simple icebox pies are a holiday tradition at the Petersen house. 
 

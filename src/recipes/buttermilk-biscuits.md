@@ -10,8 +10,6 @@ metadata:
 source_url: https://www.seriouseats.com/the-food-lab-buttermilk-biscuits-recipe
 ---
 
-# The Food Lab's Buttermilk Biscuits
-
 ## Ingredients
 
 ### Wet Ingredients

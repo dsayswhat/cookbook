@@ -10,8 +10,6 @@ metadata:
 source_url: 
 ---
 
-# Jennifer's Thanksgiving Rolls
-
 ## Ingredients
 
 ### Measuring Cup #1

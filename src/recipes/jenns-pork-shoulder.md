@@ -10,7 +10,6 @@ metadata:
 source_url: 
 ---
 
-# Jenn's Pork Shoulder that everyone likes better than Dad's
 
 ## Ingredients
 

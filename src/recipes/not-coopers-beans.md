@@ -10,7 +10,6 @@ metadata:
 source_url: 
 ---
 
-# Beans - Not Cooper's
 
 ## Ingredients
 

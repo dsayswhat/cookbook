@@ -10,7 +10,6 @@ metadata:
 source_url: 
 ---
 
-# Jenn's Breakfast Casserole
 
 ## Ingredients
 

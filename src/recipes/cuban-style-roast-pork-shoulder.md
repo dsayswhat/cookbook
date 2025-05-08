@@ -10,7 +10,7 @@ metadata:
 source_url: https://www.seriouseats.com
 ---
 
-# Cuban-Style Roast Pork Shoulder with Mojo
+
 
 ## Ingredients
 

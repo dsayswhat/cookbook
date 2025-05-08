@@ -10,7 +10,6 @@ metadata:
 source_url: https://www.loveandlemons.com/tzatziki-sauce/
 ---
 
-# Tzatziki Sauce
 
 ## Ingredients
 

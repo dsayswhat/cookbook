@@ -10,7 +10,7 @@ metadata:
 source_url: https://example.com/easy-baked-ziti
 ---
 
-# Easy Baked Ziti
+
 
 ## Ingredients
 

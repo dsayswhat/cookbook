@@ -10,8 +10,6 @@ metadata:
 source_url: 
 ---
 
-# Spiced Cranberry Sauce
-
 ## Ingredients
 
 ### Spices

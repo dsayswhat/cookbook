@@ -10,7 +10,6 @@ metadata:
 source_url: https://www.seriouseats.com/perfect-boiled-eggs-recipe
 ---
 
-# Perfect Hard-Boiled Eggs
 
 ## Ingredients
 

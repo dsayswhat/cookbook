@@ -10,7 +10,6 @@ metadata:
 source_url: 
 ---
 
-# Basic Pressure-Cooker Risotto
 
 ## Ingredients
 

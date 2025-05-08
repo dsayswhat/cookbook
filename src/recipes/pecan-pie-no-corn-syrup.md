@@ -10,7 +10,6 @@ metadata:
 source_url: http://chinesegrandma.com/recipes/pecan-pie-no-corn-syrup/
 ---
 
-# Pecan Pie (No Corn Syrup)
 
 ## Ingredients
 

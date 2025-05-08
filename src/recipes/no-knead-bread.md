@@ -10,7 +10,6 @@ metadata:
 source_url: https://example.com/no-knead-bread
 ---
 
-# No-Knead Bread
 
 ## Ingredients
 

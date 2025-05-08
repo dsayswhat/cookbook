@@ -10,7 +10,6 @@ metadata:
 source_url: https://example.com/test-pasta
 ---
 
-# Basic Test Pasta
 
 ## Ingredients
 

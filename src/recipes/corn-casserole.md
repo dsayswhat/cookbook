@@ -10,7 +10,6 @@ metadata:
 source_url: 
 ---
 
-# Corn Casserole
 
 ## Ingredients
 

@@ -10,7 +10,6 @@ metadata:
 source_url: 
 ---
 
-# Sausage-Hash Brown Breakfast Casserole
 
 ## Ingredients
 

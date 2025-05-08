@@ -9,9 +9,6 @@ metadata:
   difficulty: Easy
 source_url: 
 ---
-
-# Candied Pecans
-
 ## Ingredients
 
 ### Main Ingredients
