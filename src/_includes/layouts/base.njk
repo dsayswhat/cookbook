@@ -9,11 +9,12 @@
 <body class="min-h-screen bg-gray-50">
     <header class="bg-primary-600 text-white">
         <div class="container-recipe py-4">
-            <h1 class="text-2xl font-display font-bold">Recipe Cookbook</h1>
+            <h1 class="text-2xl font-display font-bold">
+                <a href="{{ '/' | url }}" class="hover:underline">Recipe Cookbook</a>
+            </h1>
             <nav class="mt-2">
                 <ul class="flex space-x-4">
                     <li><a href="{{ '/' | url }}" class="hover:underline">Home</a></li>
-                    <li><a href="{{ '/recipes' | url }}" class="hover:underline">All Recipes</a></li>
                 </ul>
             </nav>
         </div>
