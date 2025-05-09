@@ -43,6 +43,16 @@
   - [x] Create deployment verification script
   - [x] Add `.nojekyll` file to prevent Jekyll processing
   - [x] Update deployment check script to verify `.nojekyll` file
+- [x] Recipe list enhancements
+  - [x] Convert recipe listings from cards to tabular format
+  - [x] Implement alphabetical sorting by title
+  - [x] Create client-side filtering functionality
+  - [x] Add mobile-friendly filter interface
+  - [x] Implement responsive table design
+- [x] Homepage redesign
+  - [x] Replace original homepage with recipe list
+  - [x] Update site navigation
+  - [x] Optimize for mobile devices
 
 ## In Progress
 - [ ] Recipe migration to JSON
@@ -62,6 +72,12 @@
   - [ ] Create dropdown or sidebar for categories/tags/cuisines
   - [ ] Ensure all navigation URLs follow the standardized structure
 - [ ] Search functionality
+  - [x] Implement client-side filtering for recipe list
+  - [ ] Consider global search functionality
+- [ ] Recipe interaction features
+  - [ ] Consider adding sort options (by date, difficulty, time)
+  - [ ] Add filter buttons for popular categories/tags
+  - [ ] Implement quick-view functionality
 - [ ] PDF generation setup
 - [ ] Image handling system
 - [ ] Recipe variation support
@@ -92,6 +108,8 @@
 - Need to standardize recipe metadata structure
 - Should establish a deployment validation process
 - Need to document the CSS styling approach and class naming conventions
+- Should implement data validation for recipe filtering
+- Consider performance optimization for client-side filtering on large recipe collections
 
 ## Known Issues
 - PDF generation approach needs testing

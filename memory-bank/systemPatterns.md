@@ -68,7 +68,7 @@ Additional notes about the recipe.
 ## URL Structure
 The cookbook site uses a consistent plural naming convention for all URL paths:
 
-- `/recipes/` - Main recipe listing page
+- `/` - Homepage (now displays the recipe listing with filtering)
 - `/recipes/{recipe-id}/` - Individual recipe pages
 - `/tags/` - Tags listing page
 - `/tags/{tag-name}/` - Recipe listing filtered by tag
@@ -91,11 +91,7 @@ This separation ensures no URL conflicts while maintaining a clean content struc
 The main navigation provides access to key content sections:
 
 1. **Primary Navigation**
-   - Home (`/`)
-   - All Recipes (`/recipes/`)
-   - Categories (`/categories/`)
-   - Tags (`/tags/`)
-   - Cuisines (`/cuisines/`) 
+   - Home (`/`) - Shows all recipes with filtering functionality
 
 2. **Contextual Navigation**
    - On category pages: links to other categories
@@ -103,12 +99,13 @@ The main navigation provides access to key content sections:
    - On listing pages: filtering controls
 
 3. **Utility Navigation**
-   - Search
-   - Filters for difficulty/time
-   - Sort options
+   - Client-side filtering for recipes
+   - Future: Sort options, category filters
 
 ## Component Patterns
-- Recipe cards for list views
+- Recipe tables for list views (replacing earlier card layout)
+- Client-side filtering with debounced search
+- Recipe detail view with metadata display
 - Ingredient lists with grouping
 - Step-by-step instructions
 - Metadata display (timing, yield, difficulty)
@@ -129,13 +126,28 @@ The project uses a hybrid styling approach:
    - Responsive design with media queries
    - Print styles for PDF generation
 
-3. **Design System**
+3. **Recipe List Styling**
+   - Tabular layout with responsive design
+   - Zebra striping for better readability
+   - Hover effects for rows
+   - Mobile-optimized touch targets
+   - Alphabetical sorting of recipes by title
+
+4. **Filter Interface**
+   - Clean, accessible search input
+   - Real-time filtering across multiple fields
+   - Debounced search for performance
+   - Clear button for easy reset
+   - "No results" state with reset option
+   - Mobile-optimized interface
+
+5. **Design System**
    - Custom colors through `--color-primary-*` and `--color-accent-*` variables
    - Typography settings with `--font-*` variables
    - Custom container sizes with `--container-*` variables
    - Component-specific styling with semantic classes
 
-4. **Responsive Patterns**
+6. **Responsive Patterns**
    - Mobile-first design principles
    - Grid layouts that adapt from single column to multi-column
    - Media queries for different screen sizes:
@@ -144,11 +156,36 @@ The project uses a hybrid styling approach:
      - Desktop (min-width: 1024px)
    - Print media query for print and PDF styling
 
-5. **Class Naming Convention**
+7. **Class Naming Convention**
    - Component-based: `component-element-modifier`
    - Recipe components: `recipe-*`
    - Metadata items: `recipe-meta-item`, `recipe-meta-label`, `recipe-meta-value`
    - Recipe content: `recipe-content`
+
+## Client-Side Filtering
+The recipe list includes client-side filtering functionality with the following features:
+
+1. **Filter Input**
+   - Text input that filters recipes in real-time
+   - Filters across multiple data points (title, categories, tags)
+   - Case-insensitive string matching
+
+2. **Performance Optimization**
+   - Debounced input handling (300ms delay)
+   - Efficient DOM manipulation
+   - Clear visual feedback during filtering
+
+3. **User Experience**
+   - Clear button to reset filter
+   - "No results" message when no matches found
+   - Reset option within the no results message
+   - Mobile-friendly input with appropriate sizing
+
+4. **Implementation Pattern**
+   - Event listeners attached on DOMContentLoaded
+   - Filter function that toggles visibility of table rows
+   - Counter to track visible results for "no results" state
+   - DOM manipulation using classList.add/remove('hidden')
 
 ## Build Process
 The cookbook site uses a clean build process to prevent stale files from persisting between builds:
