@@ -5,44 +5,44 @@ title: Recipe Cookbook
 
 <div class="text-center mb-8">
   <h1 class="text-3xl md:text-4xl font-display font-bold mb-4 text-primary-800">Recipe Cookbook</h1>
-  <p class="text-lg text-gray-600 max-w-2xl mx-auto">A collection of delicious recipes organized for easy access and reference.</p>
+  <p class="text-lg text-primary-600 max-w-2xl mx-auto">A collection of delicious recipes organized for easy access and reference.</p>
 </div>
 
 <div class="mb-6">
-  <label for="recipe-filter" class="block text-lg font-medium text-gray-700 mb-2">Filter Recipes:</label>
+  <label for="recipe-filter" class="block text-lg font-medium text-primary-700 mb-2">Filter Recipes:</label>
   <div class="relative">
     <input 
       type="text" 
       id="recipe-filter" 
-      class="w-full px-4 py-3 rounded-lg border border-gray-300 shadow-sm focus:border-primary-500 focus:ring focus:ring-primary-200 focus:ring-opacity-50" 
+      class="w-full px-4 py-3 rounded-lg border border-gray-300 shadow-sm focus:border-primary-600 focus:ring focus:ring-primary-200 focus:ring-opacity-50" 
       placeholder="Search by title, category or tag..."
       aria-label="Filter recipes">
     <button 
       id="clear-filter" 
-      class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 hidden" 
+      class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-red-500 hidden" 
       aria-label="Clear filter">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
       </svg>
     </button>
   </div>
-  <p class="mt-2 text-sm text-gray-500">Type to filter results. Matches title, categories, and tags.</p>
+  <p class="mt-2 text-sm text-primary-600">Type to filter results. Matches title, categories, and tags.</p>
 </div>
 
 <div class="overflow-x-auto">
   <table id="recipe-table" class="min-w-full bg-white border border-gray-200">
     <thead>
-      <tr class="bg-gray-100">
-        <th class="px-4 py-3 text-left text-primary-700 font-semibold">Title</th>
-        <th class="px-4 py-3 text-left text-primary-700 font-semibold">Categories</th>
-        <th class="px-4 py-3 text-left text-primary-700 font-semibold">Tags</th>
+      <tr class="bg-primary-600 text-white">
+        <th class="px-4 py-3 text-left font-semibold">Title</th>
+        <th class="px-4 py-3 text-left font-semibold">Categories</th>
+        <th class="px-4 py-3 text-left font-semibold">Tags</th>
       </tr>
     </thead>
     <tbody>
       {% for recipe in collections.allRecipes | sort(false, false, 'data.title') %}
-        <tr class="border-t border-gray-200 hover:bg-gray-50 {% if loop.index is even %}bg-gray-50{% endif %}">
+        <tr class="border-t border-gray-200 hover:bg-accent-100 {% if loop.index is even %}bg-accent-50{% endif %}">
           <td class="px-4 py-3">
-            <a href="{{ ('/recipes/' + recipe.data.id + '/') | url }}" class="text-primary-700 hover:text-primary-600 hover:underline font-display font-semibold">
+            <a href="{{ ('/recipes/' + recipe.data.id + '/') | url }}" class="text-primary-700 hover:text-red-500 hover:underline font-display font-semibold">
               {{ recipe.data.title }}
             </a>
           </td>
@@ -57,7 +57,7 @@ title: Recipe Cookbook
             {% if recipe.data.metadata.tags %}
               <div class="flex flex-wrap gap-1">
                 {% for tag in recipe.data.metadata.tags %}
-                  <span class="bg-gray-100 text-gray-700 px-2 py-1 text-xs rounded">{{ tag }}</span>
+                  <span class="bg-accent-200 text-primary-800 px-2 py-1 text-xs rounded">{{ tag }}</span>
                 {% endfor %}
               </div>
             {% else %}
@@ -70,8 +70,8 @@ title: Recipe Cookbook
   </table>
 </div>
 
-<div id="no-results" class="hidden py-8 text-center text-gray-500">
-  No recipes found matching your search. <button id="reset-filter" class="text-primary-600 hover:underline">Clear filter</button>
+<div id="no-results" class="hidden py-8 text-center text-primary-600">
+  No recipes found matching your search. <button id="reset-filter" class="text-red-500 hover:underline">Clear filter</button>
 </div>
 
 <script>
