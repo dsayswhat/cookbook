@@ -33,4 +33,6 @@ source_url:
 6. Marinate for 2 to 6 hours for best flavor
 
 ## Notes
-Perfect for chicken or pork souvlaki. Dad likes to grill his chicken with this marinade. This is the grilled chicken that everyone likes.
+1 batch of this will works with a big pack of boneless chicken breasts (4 lbs, usually 5 chicken breasts).
+
+We also use it with 4-5 pork chops. I usually cut them about 1 inch thick from a pork loin, but you can buy them pre-cut as well.
