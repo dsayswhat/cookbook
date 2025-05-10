@@ -87,6 +87,24 @@ Using Markdown with YAML frontmatter for recipe files. Core collections (recipes
   - Will configure path prefixing to handle subdirectory hosting
   - Created deployment verification script to check configuration
 
+## Recent Changes
+
+### URL Construction Fix for GitHub Pages
+
+Fixed an issue with URL construction in Nunjucks templates that was causing broken links when deployed to GitHub Pages:
+
+- Problem: The GitHub Pages path prefix `/cookbook` was being added at the end of URLs instead of at the beginning
+- Root cause: The `url` filter was only being applied to the last segment of the URL in homepage table links
+- Solution: Added parentheses around the entire path before applying the filter: `{{ ('/recipes/' + recipe.data.id + '/') | url }}`
+- Files modified: 
+  - `src/index.njk`
+  - `src/recipes.njk`
+- Documented this pattern in:
+  - `.cursor/rules/project-patterns.mdc`
+  - `memory-bank/techContext.md`
+
+This pattern should be maintained in all future template updates to ensure proper URL construction.
+
 ## Questions/Considerations
 1. Should we add sorting capabilities to the recipe list (by title, date, etc.)?
 2. Should we implement filter buttons for common categories/tags in addition to the text search?

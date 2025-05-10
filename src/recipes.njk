@@ -43,7 +43,7 @@ eleventyExcludeFromCollections: true
       {% for recipe in collections.allRecipes | sort(false, false, 'data.title') %}
         <tr class="border-t border-gray-200 hover:bg-gray-50 {% if loop.index is even %}bg-gray-50{% endif %}">
           <td class="px-4 py-3">
-            <a href="{{ '/recipes/' + recipe.data.id + '/' | url }}" class="text-primary-700 hover:text-primary-600 hover:underline font-display font-semibold">
+            <a href="{{ ('/recipes/' + recipe.data.id + '/') | url }}" class="text-primary-700 hover:text-primary-600 hover:underline font-display font-semibold">
               {{ recipe.data.title }}
             </a>
           </td>

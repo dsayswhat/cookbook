@@ -44,3 +44,32 @@
 7. **GitHub Pages**: Deployment to GitHub Pages using GitHub Actions
 8. **Path Prefixing**: Configure Eleventy to handle subdirectory path on GitHub Pages
 9. **`.nojekyll` file**: Prevents GitHub from processing the site with Jekyll 
+
+## GitHub Pages URL Handling
+
+The website is deployed to GitHub Pages under a subdirectory (pathPrefix: '/cookbook'). This requires special attention when constructing URLs in templates:
+
+1. The Eleventy configuration includes a custom URL filter that adds the GitHub Pages path prefix:
+   ```js
+   eleventyConfig.addFilter("url", function(urlPath) {
+     const isGitHubPages = process.env.GITHUB_ACTIONS === "true" || process.env.ELEVENTY_ENV === "github";
+     const pathPrefix = isGitHubPages ? "/cookbook" : "";
+     
+     // Other URL processing logic...
+     
+     return pathPrefix + urlPath;
+   });
+   ```
+
+2. When applying this filter in Nunjucks templates, always use parentheses around the entire path:
+   ```njk
+   CORRECT: <a href="{{ ('/recipes/' + recipe.data.id + '/') | url }}">Link Text</a>
+   INCORRECT: <a href="{{ '/recipes/' + recipe.data.id + '/' | url }}">Link Text</a>
+   ```
+
+3. Proper URL construction ensures links work correctly when deployed:
+   - Local development: `/recipes/recipe-id/`
+   - GitHub Pages: `/cookbook/recipes/recipe-id/`
+   
+4. Without parentheses, the filter applies only to the last part of the path, causing broken URLs:
+   - Incorrect: `/recipes/recipe-id/cookbook`
