@@ -1,5 +1,27 @@
 ---
-description:
-globs:
+description: 
+globs: 
 alwaysApply: false
 ---
+# Project-Specific Patterns
+
+## GitHub Pages URL Handling
+
+When constructing URLs in Nunjucks templates, always use parentheses around the entire path before applying the `url` filter:
+
+```njk
+CORRECT: <a href="{{ ('/recipes/' + recipe.data.id + '/') | url }}">Link Text</a>
+INCORRECT: <a href="{{ '/recipes/' + recipe.data.id + '/' | url }}">Link Text</a>
+```
+
+The reason is that Eleventy's `url` filter adds the path prefix `/cookbook` for GitHub Pages deployment. Without parentheses:
+- Incorrect URL: `/recipes/recipe-id/cookbook`
+- Correct URL: `/cookbook/recipes/recipe-id/`
+
+This pattern should be used everywhere URLs are constructed in the codebase.
+
+## Template Patterns
+
+- Use proper escaping for user-generated content with the `safe` filter when needed
+- Keep all recipe-related display logic in the recipe layout templates
+- All links should follow the GitHub Pages URL pattern above
