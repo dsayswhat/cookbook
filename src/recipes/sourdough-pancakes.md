@@ -15,13 +15,14 @@ source_url:
 - 1 cup sourdough starter
 - 1 cup milk
 - 1 egg
-- 1 tbsp vegetable oil
+- 2 tbsp vegetable oil
 
 ### Dry Ingredients
 - 1 cup flour
-- 1 Tbsp sugar
+- 1 or 2 Tbsp sugar
 - 1/2 tsp salt
-- 1/2 tsp baking soda
+- 1  tsp baking soda
+- 1 tsp baking powder
 
 ## Instructions
 
