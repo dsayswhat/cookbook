@@ -80,7 +80,10 @@ module.exports = function(eleventyConfig) {
 
   // Copy static assets
   eleventyConfig.addPassthroughCopy("src/assets");
-  
+
+  // Copy JavaScript files
+  eleventyConfig.addPassthroughCopy("src/js");
+
   // Copy .nojekyll file to prevent GitHub Pages from using Jekyll
   eleventyConfig.addPassthroughCopy("src/.nojekyll");
 
@@ -88,6 +91,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addWatchTarget("src/_includes");
   eleventyConfig.addWatchTarget("src/recipes");
   eleventyConfig.addWatchTarget("src/css");
+  eleventyConfig.addWatchTarget("src/js");
 
   // Create a collection for all recipes
   eleventyConfig.addCollection("allRecipes", function(collection) {

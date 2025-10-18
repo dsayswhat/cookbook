@@ -58,12 +58,66 @@
   margin-bottom: 2rem;
 }
 
+.recipe-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
 .recipe-title {
   font-family: var(--font-display);
   font-size: 1.875rem;
   font-weight: 700;
-  margin-bottom: 1rem;
   line-height: 1.2;
+  flex: 1;
+}
+
+/* Wake Lock Button Styling */
+.wake-lock-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--color-accent-50);
+  border: 2px solid var(--color-accent-200);
+  border-radius: 0.5rem;
+  color: var(--color-primary-700);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 44px; /* Good tap target size for mobile */
+  white-space: nowrap;
+}
+
+.wake-lock-button:hover {
+  background-color: var(--color-accent-100);
+  border-color: var(--color-accent-300);
+}
+
+.wake-lock-button:active {
+  transform: scale(0.98);
+}
+
+.wake-lock-button.active {
+  background-color: var(--color-primary-700);
+  border-color: var(--color-primary-800);
+  color: white;
+}
+
+.wake-lock-button.active:hover {
+  background-color: var(--color-primary-600);
+  border-color: var(--color-primary-700);
+}
+
+.wake-lock-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.wake-lock-label {
+  font-size: 0.875rem;
 }
 
 /* Recipe Metadata Styling */
@@ -261,7 +315,17 @@
   .recipe-title {
     font-size: 1.5rem;
   }
-  
+
+  .recipe-title-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .wake-lock-button {
+    width: 100%;
+    justify-content: center;
+  }
+
   .recipe-content h1 {
     font-size: 1.5rem;
     padding: 0.5rem 0.75rem;
@@ -362,7 +426,7 @@
   }
   
   /* Hide unnecessary elements for print */
-  header, footer, nav {
+  header, footer, nav, .wake-lock-button {
     display: none;
   }
 } 

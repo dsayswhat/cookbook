@@ -3,7 +3,14 @@ layout: layouts/base.njk
 ---
 <article class="recipe">
   <header class="recipe-header">
-    <h1 class="recipe-title">{{ title }}</h1>
+    <div class="recipe-title-row">
+      <h1 class="recipe-title">{{ title }}</h1>
+      <button id="wake-lock-toggle" class="wake-lock-button" aria-label="Toggle screen wake lock" aria-pressed="false" style="display: none;">
+        <span id="wake-lock-inactive" class="wake-lock-icon">☀️</span>
+        <span id="wake-lock-active" class="wake-lock-icon" style="display: none;">🔆</span>
+        <span class="wake-lock-label">Keep Awake</span>
+      </button>
+    </div>
     
     <div class="recipe-meta">
       {% if metadata.categories %}
@@ -60,6 +67,6 @@ layout: layouts/base.njk
   <div class="recipe-content">
     {{ content | safe }}
   </div>
-</article> 
+</article>
 
-
+<script src="{{ '/js/wake-lock.js' | url }}"></script>
