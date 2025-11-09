@@ -10,12 +10,6 @@ metadata:
 source_url:
 ---
 
-## Why This Recipe Works
-
-The problem with deep-dish apple pie is that the apples are often unevenly cooked (some mushy, some crunchy) and the exuded juice leaves the apples swimming in an ocean of liquid, producing a bottom crust that is a pale, soggy mess. Then there is the gaping hole left between the apples (which are shrunken from the loss of all that moisture) and the arching top crust, making it impossible to slice and serve a neat piece of pie. We wanted our piece of deep-dish pie to be a towering wedge of tender, juicy apples, fully framed by a buttery, flaky crust.
-
-Precooking the apples solved the shrinking problem, helped the apples hold their shape, and prevented a flood of juices from collecting in the bottom of the pie plate, giving us a nicely browned bottom crust. Why didn't cooking the apples twice (once on the stovetop and once in the oven) cause them to become insipid and mushy? We learned that when the apples are gently heated, their pectin is converted to a heat-stable form that keeps them from becoming mushy when cooked further in the oven. All that was left to do was to choose the right combination of sweet and tart apples and stir in a little brown sugar, salt, lemon, and cinnamon, for flavor and sweetness.
-
 ## Ingredients
 
 ### Crust
@@ -50,3 +44,10 @@ Precooking the apples solved the shrinking problem, helped the apples hold their
 - Use a combination of tart and sweet apples for this pie. Good choices for tart are Granny Smiths, Empires, or Cortlands; for sweet we recommend Golden Delicious, Jonagolds, or Braeburns.
 - Serve with vanilla ice cream or lightly sweetened whipped cream.
 - The recipe references photos for rolling and assembling the pie dough (see original source).
+
+
+## Why This Recipe Works
+
+The problem with deep-dish apple pie is that the apples are often unevenly cooked (some mushy, some crunchy) and the exuded juice leaves the apples swimming in an ocean of liquid, producing a bottom crust that is a pale, soggy mess. Then there is the gaping hole left between the apples (which are shrunken from the loss of all that moisture) and the arching top crust, making it impossible to slice and serve a neat piece of pie. We wanted our piece of deep-dish pie to be a towering wedge of tender, juicy apples, fully framed by a buttery, flaky crust.
+
+Precooking the apples solved the shrinking problem, helped the apples hold their shape, and prevented a flood of juices from collecting in the bottom of the pie plate, giving us a nicely browned bottom crust. Why didn't cooking the apples twice (once on the stovetop and once in the oven) cause them to become insipid and mushy? We learned that when the apples are gently heated, their pectin is converted to a heat-stable form that keeps them from becoming mushy when cooked further in the oven. All that was left to do was to choose the right combination of sweet and tart apples and stir in a little brown sugar, salt, lemon, and cinnamon, for flavor and sweetness.
