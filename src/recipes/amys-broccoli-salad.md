@@ -10,7 +10,7 @@ metadata:
 source_url:
 ---
 
-A classic broccoli salad with a sweet and tangy dressing, featuring crispy bacon and crunchy sunflower seeds.
+A classic broccoli salad with a sweet and tangy dressing, featuring crispy bacon.
 
 ## Ingredients
 
@@ -22,8 +22,7 @@ A classic broccoli salad with a sweet and tangy dressing, featuring crispy bacon
 ### For the Salad
 - 4 heads broccoli, cut into bite-sized florets
 - 1/4 purple onion, finely diced
-- 6 pieces bacon (about 1/2 cup), cooked crispy and crumbled
-- Sunflower seeds, to taste
+- 9 pieces bacon, cooked crispy and crumbled
 
 ## Instructions
 
@@ -37,12 +36,10 @@ A classic broccoli salad with a sweet and tangy dressing, featuring crispy bacon
 ### Assemble the Salad
 5. In a large bowl, combine broccoli florets, diced onion, and crumbled bacon
 6. Pour dressing over the broccoli mixture and toss until everything is well coated
-7. Sprinkle sunflower seeds on top
-8. Refrigerate for at least 1 hour before serving to allow flavors to meld
+7. Refrigerate for at least 1 hour before serving to allow flavors to meld
 
 ## Notes
 
 - Salad can be made up to 24 hours in advance
 - Store covered in the refrigerator
 - The longer it sits, the softer the broccoli becomes - add just before serving if you prefer crunchier broccoli
-- Adjust sunflower seeds to your preference
