@@ -8,6 +8,19 @@ metadata:
   tags: [pickled, onions, quick, sides]
   difficulty: Easy
 source_url: https://www.bonappetit.com/recipe/quick-pickled-red-onions
+recipe_table:
+  steps:
+    step: sit 1 hour at room temp
+    with:
+      - step: pour over in a jar
+        with:
+          - step: whisk until dissolved
+            with:
+              - 1/2 cup apple cider vinegar
+              - 1 Tbsp sugar
+              - 1 1/2 tsp Diamond Crystal (or 3/4 tsp Morton) kosher salt
+              - 1 cup water
+          - "1 red onion, thinly sliced"
 ---
 
 

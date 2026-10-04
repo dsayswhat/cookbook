@@ -8,6 +8,30 @@ metadata:
   tags: [cranberry, Thanksgiving, Oregon]
   difficulty: Easy
 source_url: 
+recipe_table:
+  steps:
+    step: "boil, then simmer ~15 min, stirring"
+    with:
+      - step: combine in saucepan
+        with:
+          - step: grind fine
+            with:
+              - 10 whole allspice berries
+              - 10 whole cloves
+              - 10 whole black peppercorns
+          - 1 small cinnamon stick
+          - 4 cups cranberries
+          - 1 1/2 cups Oregon pinot noir
+          - 1 cup light brown sugar
+          - 1 cup honey
+          - 1 cup fresh orange juice
+          - 6 strips orange zest
+          - 2 (4-in) sprigs rosemary
+      - step: "split, scrape seeds; add seeds and pod"
+        with:
+          - 1 vanilla pod
+  after:
+    - "Cook until the berries burst and the liquid thickens slightly; discard cinnamon, rosemary, zest and vanilla pod"
 ---
 
 ## Ingredients
