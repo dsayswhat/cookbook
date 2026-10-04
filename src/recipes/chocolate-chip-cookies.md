@@ -8,6 +8,31 @@ metadata:
   tags: [chocolate, cookies, classic]
   difficulty: Easy
 source_url: https://example.com/classic-chocolate-chip-cookies
+recipe_table:
+  before:
+    - Preheat oven to 375°F (190°C)
+  steps:
+    step: drop by the Tbsp; bake 9–11 min
+    with:
+      - step: stir in
+        with:
+          - step: gradually blend in
+            with:
+              - step: "beat in, eggs one at a time"
+                with:
+                  - step: cream until fluffy
+                    with:
+                      - "1 cup butter, softened"
+                      - 3/4 cup granulated sugar
+                      - "3/4 cup brown sugar, packed"
+                  - 2 eggs
+                  - 1 tsp vanilla extract
+              - step: whisk
+                with:
+                  - 2 1/4 cups all-purpose flour
+                  - 1 tsp baking soda
+                  - 1 tsp salt
+          - 2 cups chocolate chips
 ---
 
 ## Ingredients

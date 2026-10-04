@@ -8,6 +8,32 @@ metadata:
   tags: [apple, fall, easy, comfort food]
   difficulty: Easy
 source_url: 
+recipe_table:
+  before:
+    - Preheat oven to 375°F
+  steps:
+    step: bake 30–35 min
+    with:
+      - step: sprinkle over
+        with:
+          - step: stir in 2-qt dish
+            with:
+              - "5 cups sliced, peeled cooking apples"
+              - 2–4 Tbsp granulated sugar
+          - step: stir in
+            with:
+              - step: cut in to coarse crumbs
+                with:
+                  - step: combine
+                    with:
+                      - 1/2 cup rolled oats
+                      - 1/2 cup packed brown sugar
+                      - 1/4 cup all-purpose flour
+                      - 1/4 tsp ground cinnamon
+                  - 1/4 cup butter
+              - 1/4 cup chopped nuts or coconut (optional)
+  after:
+    - "Bake until fruit is tender and topping golden; serve warm with vanilla ice cream, if desired"
 ---
 
 ## Ingredients

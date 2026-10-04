@@ -8,6 +8,22 @@ metadata:
   tags: [carrots, garlic, herbs]
   difficulty: Easy
 source_url: http://www.mycookbook.net/Recipe_Print.asp?RecipeID=158
+recipe_table:
+  steps:
+    step: cook 15 min more
+    with:
+      - step: brown 15 min over gentle heat
+        with:
+          - step: heat in skillet
+            with:
+              - 2 Tbsp extra virgin olive oil
+          - "1 1/4 lb baby carrots, sliced diagonally 1/2 in thick"
+          - "12 garlic cloves, halved"
+      - salt and freshly ground pepper
+      - "1 thyme sprig, leaves minced"
+      - "1 rosemary sprig, leaves minced"
+  after:
+    - "Serve with pan-fried fish, white meats or roast poultry"
 ---
 
 ## Ingredients

@@ -313,7 +313,7 @@
 }
 
 .tabular-recipe-ingredient {
-  min-width: 12rem;
+  min-width: 9rem;
 }
 
 .tabular-recipe-step {
@@ -321,7 +321,7 @@
   background-color: var(--color-accent-50);
   color: var(--color-primary-800);
   font-weight: 600;
-  min-width: 6rem;
+  min-width: 4.5rem;
 }
 
 .tabular-recipe-prep,

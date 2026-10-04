@@ -8,6 +8,24 @@ metadata:
   tags: [broccoli, bacon, salad, cold-dish, potluck]
   difficulty: Easy
 source_url:
+recipe_table:
+  steps:
+    step: chill 1+ hour
+    with:
+      - step: toss
+        with:
+          - step: combine
+            with:
+              - step: "cook crisp, crumble"
+                with:
+                  - 9 pieces bacon
+              - "4 heads broccoli, in bite-sized florets"
+              - "1/4 purple onion, finely diced"
+          - step: whisk until smooth
+            with:
+              - 1 cup mayonnaise
+              - 1/2 cup sugar
+              - 4 Tbsp white wine vinegar
 ---
 
 A classic broccoli salad with a sweet and tangy dressing, featuring crispy bacon.
