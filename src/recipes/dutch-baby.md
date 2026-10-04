@@ -7,7 +7,7 @@ metadata:
   cuisine: Family
   tags: [Delight, Jenn]
   difficulty: Easy
-source_url: https://example.com/test-pasta
+source_url: 
 recipe_table:
   before:
     - Preheat oven to 425°F

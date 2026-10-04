@@ -8,6 +8,35 @@ metadata:
   tags: [molasses, sugar cookies, spice cookies, rolled cookies]
   difficulty: Easy
 source_url:
+recipe_table:
+  steps:
+    step: bake 8–10 min at 375°F
+    with:
+      - step: "form 1-in balls, roll in sugar"
+        with:
+          - step: chill 1+ hour
+            with:
+              - step: mix well
+                with:
+                  - step: beat well
+                    with:
+                      - step: "melt, cool"
+                        with:
+                          - 3/4 cup shortening
+                      - 1 cup granulated sugar
+                      - 1 egg
+                      - 1/4 cup molasses
+                  - step: sift
+                    with:
+                      - 2 cups sifted all-purpose flour
+                      - 2 tsp baking soda
+                      - 1/2 tsp ground cloves
+                      - 1/2 tsp ground ginger
+                      - 1 tsp ground cinnamon
+                      - 1/2 tsp salt
+          - "extra granulated sugar, for rolling"
+  after:
+    - "Space well apart on greased sheets, they spread. Cool 2–3 min before moving to a rack"
 ---
 
 Soft and chewy molasses cookies rolled in granulated sugar. These cookies have a wonderful spiced flavor and a sugary crackled top. Recipe from Marie's kitchen.

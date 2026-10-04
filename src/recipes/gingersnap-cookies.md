@@ -8,6 +8,37 @@ metadata:
   tags: [molasses, ginger, spice cookies, rolled cookies, christmas cookies]
   difficulty: Medium
 source_url:
+recipe_table:
+  steps:
+    step: "roll, cut; bake 15–18 min at 350°F"
+    with:
+      - step: chill 2–3 hours
+        with:
+          - step: add alternately
+            with:
+              - step: blend in
+                with:
+                  - step: mix well
+                    with:
+                      - 1/3 cup shortening
+                      - 1 cup brown sugar
+                      - 1 1/2 cups molasses
+                  - 1/2 cup cool tap water
+              - step: sift
+                with:
+                  - 6 cups all-purpose flour
+                  - 1 tsp salt
+                  - 1 tsp allspice
+                  - 1 tsp ground ginger
+                  - 1 tsp ground cloves
+                  - 1 tsp ground cinnamon
+              - step: dissolve
+                with:
+                  - 2 tsp baking soda
+                  - 3 Tbsp water
+  after:
+    - "Flour the surface, rolling pin and hands well; roll 1/2 in thick and cut with a 2 1/2-in cutter"
+    - Bake on greased or parchment-lined sheets
 ---
 
 Classic gingersnap cookies with warm spices and molasses. These cookies have a delightful snap and traditional gingerbread flavor. Recipe from Lorna & Bilson.
