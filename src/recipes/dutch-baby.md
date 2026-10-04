@@ -7,7 +7,29 @@ metadata:
   cuisine: Family
   tags: [Delight, Jenn]
   difficulty: Easy
-source_url: https://example.com/test-pasta
+source_url: 
+recipe_table:
+  before:
+    - Preheat oven to 425°F
+  steps:
+    step: top and serve
+    with:
+      - step: bake 15 min
+        with:
+          - step: drizzle batter in circles
+            with:
+              - step: melt in pie plate in oven
+                with:
+                  - 1 Tbsp butter
+              - step: "add, mix until smoother"
+                with:
+                  - step: mix gradually until smooth
+                    with:
+                      - 1/2 cup flour
+                      - 1/2 cup milk
+                  - 2 eggs
+      - lemon
+      - powdered sugar
 ---
 
 ## Ingredients
@@ -17,8 +39,9 @@ source_url: https://example.com/test-pasta
 - 1/2 cup milk
 - 2 eggs
 - 1 tbsp butter
+- Lemon and powdered sugar, for topping
 
-### Instructions
+## Instructions
 1. Preheat oven to 425
 1. Put butter in pie plate and stick in the oven to melt
 1. Mix flour and milk gradually until smooth

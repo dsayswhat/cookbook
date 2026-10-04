@@ -8,6 +8,32 @@ metadata:
   tags: [graham crackers, cookies, stand mixer, butter cookies]
   difficulty: Easy
 source_url: https://thevanillablebanblog.com
+recipe_table:
+  before:
+    - "Preheat oven to 350°F, rack in the middle; line baking sheets with parchment"
+  steps:
+    step: scoop 1 oz balls; bake 10–12 min
+    with:
+      - step: mix until combined
+        with:
+          - step: mix in
+            with:
+              - step: "beat until fluffy, 2–3 min"
+                with:
+                  - step: beat 1 min
+                    with:
+                      - "9 Tbsp unsalted butter, room temperature"
+                  - 1/2 cup granulated sugar
+              - 1 large egg
+              - 1 tsp vanilla extract
+          - step: whisk
+            with:
+              - 1 1/4 cups graham cracker crumbs
+              - 1 cup all-purpose flour
+              - 1 1/2 tsp baking powder
+              - 1/4 tsp salt
+  after:
+    - "Space 2 in apart; cool 5 min on the sheet, then on a rack"
 ---
 
 A delicious cookie made with graham cracker crumbs that creates a wonderful texture and flavor. Perfect for enjoying on their own or with a glass of milk.

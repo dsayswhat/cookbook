@@ -8,6 +8,21 @@ metadata:
   tags: [cinnamon rolls, viral, easy, comfort food]
   difficulty: Easy
 source_url: 
+recipe_table:
+  before:
+    - Preheat oven to 350°F; spray a baking dish
+  steps:
+    step: bake 25–30 min
+    with:
+      - step: pour over
+        with:
+          - "1 can Pillsbury Grands Cinnamon Rolls, in the dish"
+          - step: mix until smooth
+            with:
+              - 1/2 cup heavy whipping cream
+              - 1/4 cup brown sugar
+  after:
+    - Spoon any unabsorbed liquid over the rolls; frost with the included icing
 ---
 
 # TikTok Cinnamon Rolls
@@ -33,4 +48,4 @@ source_url:
 
 ## Notes
 - Pillsbury Grands Cinnamon Rolls are the absolute best option for this recipe. Non-Grands cinnamon rolls will work, but they are not quite as good.
-- Can also add chopped nuts by sprinkling them on the rolls before adding t
+- Can also add chopped nuts by sprinkling them on the rolls before adding the cream mixture.

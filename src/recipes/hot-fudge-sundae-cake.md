@@ -8,6 +8,35 @@ metadata:
   tags: [chocolate, cake, easy, comfort food]
   difficulty: Easy
 source_url:
+recipe_table:
+  before:
+    - Preheat oven to 350°F; ungreased 9×9-in pan
+  steps:
+    step: bake 40 min
+    with:
+      - step: pour over everything
+        with:
+          - step: sprinkle evenly over
+            with:
+              - step: stir until smooth
+                with:
+                  - step: mix in the pan
+                    with:
+                      - 1 cup flour
+                      - 3/4 cup white sugar
+                      - 2 Tbsp cocoa
+                      - 2 tsp baking powder
+                      - 1/4 tsp salt
+                  - step: mix
+                    with:
+                      - 1/2 cup milk
+                      - 2 Tbsp oil
+                      - 1 tsp vanilla
+              - step: mix
+                with:
+                  - 1 cup brown sugar
+                  - 1/4 cup cocoa
+          - 1 3/4 cups boiling water
 ---
 
 ## Ingredients

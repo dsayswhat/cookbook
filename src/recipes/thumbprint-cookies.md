@@ -8,6 +8,33 @@ metadata:
   tags: [butter cookies, jam cookies, christmas cookies, holiday cookies, nut-coated]
   difficulty: Easy
 source_url:
+recipe_table:
+  before:
+    - Preheat oven to 375°F (190°C)
+  steps:
+    step: fill while warm
+    with:
+      - step: press thumbprint; bake 10–15 min
+        with:
+          - step: "roll 1-in balls, dip, roll in nuts"
+            with:
+              - step: mix until combined
+                with:
+                  - step: cream until fluffy; beat in yolk and vanilla
+                    with:
+                      - 1/2 cup soft shortening
+                      - 1/4 cup brown sugar
+                      - 1 egg yolk
+                      - 1/2 tsp vanilla extract
+                  - step: sift
+                    with:
+                      - 1 cup sifted all-purpose flour
+                      - 1/4 tsp salt
+              - "1 egg white, slightly beaten"
+              - finely chopped nuts (or corn flakes)
+      - "fruit preserves, jelly or frosting"
+  after:
+    - Space 1 in apart on greased or parchment-lined sheets; re-press centers straight out of the oven; cool on a rack
 ---
 
 Classic thumbprint cookies with a tender buttery base, rolled in chopped nuts, and filled with your choice of jam, jelly, or frosting. Perfect for holidays or any special occasion.

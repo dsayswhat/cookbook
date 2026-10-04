@@ -8,6 +8,22 @@ metadata:
   tags: [potatoes, comfort food, holiday]
   difficulty: Easy
 source_url:
+recipe_table:
+  before:
+    - Bring a large pot of water to a boil
+  steps:
+    step: season to taste
+    with:
+      - step: mash until smooth
+        with:
+          - step: boil ~20 min until soft; drain
+            with:
+              - step: "peel, cut 1-in cubes"
+                with:
+                  - 5 lb bag russet potatoes (enough to fill your serving bowl)
+          - 2 sticks butter
+          - 8 oz cream cheese
+      - salt and pepper
 ---
 
 ## Ingredients

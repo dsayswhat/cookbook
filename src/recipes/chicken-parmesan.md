@@ -8,6 +8,27 @@ metadata:
   tags: [chicken, parmesan, Delight]
   difficulty: Easy
 source_url: 
+recipe_table:
+  before:
+    - Preheat oven to 350°F
+  steps:
+    step: "bake in dish, 1 hour"
+    with:
+      - step: "coat, pressing to adhere"
+        with:
+          - step: brush
+            with:
+              - 4 chicken breasts
+              - step: melt together
+                with:
+                  - 4 Tbsp butter
+                  - "2 cloves garlic, minced"
+          - step: mix in shallow dish
+            with:
+              - 1/2 cup parmesan cheese
+              - 2 Tbsp parsley
+              - 1/2 tsp paprika
+              - 1/2 tsp garlic salt
 ---
 
 ## Ingredients

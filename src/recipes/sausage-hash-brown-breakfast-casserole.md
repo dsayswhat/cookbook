@@ -8,6 +8,31 @@ metadata:
   tags: [sausage, hash browns, casserole, breakfast]
   difficulty: Easy
 source_url: 
+recipe_table:
+  before:
+    - Preheat oven to 350°F; grease a 13×9-in baking dish
+  steps:
+    step: bake 35–40 min
+    with:
+      - step: pour evenly over
+        with:
+          - step: "stir, spread in dish"
+            with:
+              - step: "cook, crumble, drain"
+                with:
+                  - 1 lb mild ground pork sausage
+                  - 1 lb hot ground pork sausage
+              - step: prepare per package
+                with:
+                  - 30 oz frozen hash browns
+                  - 1/2 tsp salt
+                  - 1/2 tsp pepper
+              - 1 cup shredded Cheddar
+          - step: whisk
+            with:
+              - 6 large eggs
+              - 2 cups milk
+              - 1 tsp salt
 ---
 
 

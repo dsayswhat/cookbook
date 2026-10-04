@@ -8,6 +8,25 @@ metadata:
   tags: [berries, fresh fruit, summer dessert, no-bake, easy dessert]
   difficulty: Easy
 source_url:
+recipe_table:
+  steps:
+    step: pour into shell; chill 2–3+ hours
+    with:
+      - step: fold in gently
+        with:
+          - step: "off heat, stir in; cool 10–15 min"
+            with:
+              - step: "cook, stirring, until thick and glossy"
+                with:
+                  - step: mash in saucepan
+                    with:
+                      - 2 cups fresh berries
+                      - 1/2 cup granulated sugar
+                  - 4 Tbsp cornstarch
+                  - 1 tsp lemon juice
+              - 1 Tbsp butter
+          - 3 cups whole fresh berries
+      - 1 baked 9-in pie shell
 ---
 
 A fresh and delicious berry pie featuring a cooked berry glaze folded with whole fresh berries in a pre-baked pie shell. No oven needed for the filling! Recipe from the kitchen of Pat Currie Galey.

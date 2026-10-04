@@ -8,6 +8,33 @@ metadata:
   tags: [biscuits, buttermilk, breakfast]
   difficulty: Easy
 source_url: https://www.seriouseats.com/the-food-lab-buttermilk-biscuits-recipe
+recipe_table:
+  before:
+    - "Preheat oven to 425°F, rack in the middle"
+  steps:
+    step: "brush tops; bake ~14 min"
+    with:
+      - step: "roll, fold & cut"
+        with:
+          - step: "fold together, knead briefly"
+            with:
+              - step: whisk
+                with:
+                  - 1/2 cup buttermilk
+                  - 1/2 cup sour cream
+              - step: pulse to coarse meal
+                with:
+                  - step: process 2 sec
+                    with:
+                      - "10 oz (2 1/4 cups) flour, plus extra for dusting"
+                      - 1 Tbsp baking powder
+                      - 1/4 tsp baking soda
+                      - 1 1/2 tsp Diamond Crystal kosher salt
+                  - "8 Tbsp cold butter, in 1/4-inch pats"
+      - 2 Tbsp melted butter
+  after:
+    - "Roll & fold: roll to 12×8 in, fold in thirds both ways; repeat once. Roll 1 in thick, cut 2 1/2-in rounds"
+    - Rotate pan halfway through baking; cool 5 minutes
 ---
 
 ## Ingredients

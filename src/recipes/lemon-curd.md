@@ -8,6 +8,24 @@ metadata:
   tags: [lemon, dessert, spread]
   difficulty: Easy
 source_url: 
+recipe_table:
+  before:
+    - "Bring 1–2 in of water to a boil in the double boiler, then reduce to a simmer"
+  steps:
+    step: "refrigerate, up to 10 days"
+    with:
+      - step: "off heat, whisk in"
+        with:
+          - step: "whisk constantly ~10 min, until thick"
+            with:
+              - 4 large egg yolks
+              - 2/3 cup granulated sugar
+              - 1 Tbsp lemon zest
+              - 1/3 cup fresh lemon juice
+              - 1/8 tsp salt
+          - "6 Tbsp unsalted butter, softened, in 6 pieces"
+  after:
+    - Press plastic wrap onto the surface to stop a skin forming; it thickens as it cools
 ---
 
 

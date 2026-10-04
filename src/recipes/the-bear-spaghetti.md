@@ -1,6 +1,6 @@
 ---
 layout: layouts/recipe.njk
-id: bear-pasta
+id: the-bear-spaghetti
 title: Bear Spaghetti
 metadata:
   categories: [Main Course, Pasta]
@@ -8,6 +8,33 @@ metadata:
   tags: [the bear, basil oil, san marzano, tomatoes]
   difficulty: Medium
 source_url: 
+recipe_table:
+  steps:
+    step: "add pasta, cook 1 min in sauce"
+    with:
+      - step: cook 5 min; remove onion
+        with:
+          - step: blend
+            with:
+              - step: "cook 45 sec–2 min, until basil wilts; cool"
+                with:
+                  - 1/3 cup olive oil
+                  - "4 cloves garlic, sliced thin"
+                  - "1 cup fresh basil, packed"
+                  - 1/2 tsp hot pepper flakes
+          - step: "crush in; cover, cook 20 min"
+            with:
+              - step: "brown cut-side down, 3–4 min"
+                with:
+                  - 2 Tbsp butter
+                  - "1 medium onion, halved and peeled"
+              - 28 oz can San Marzano tomatoes
+              - salt to taste
+      - step: boil until just under al dente
+        with:
+          - 1 lb spaghetti
+  after:
+    - "Serve right away with grated parmesan, more fresh basil and black pepper"
 ---
 
 # Bear Spaghetti

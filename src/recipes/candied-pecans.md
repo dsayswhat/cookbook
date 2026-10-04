@@ -8,6 +8,19 @@ metadata:
   tags: [pecans, nuts, sweet]
   difficulty: Easy
 source_url: 
+recipe_table:
+  before:
+    - Preheat oven to 275°F; line a baking sheet with parchment
+  steps:
+    step: toast 8–10 min
+    with:
+      - step: stir to coat
+        with:
+          - step: bring to a boil
+            with:
+              - 1/2 cup sugar
+              - 1/2 cup water
+          - 2 1/2 cups pecans
 ---
 ## Ingredients
 

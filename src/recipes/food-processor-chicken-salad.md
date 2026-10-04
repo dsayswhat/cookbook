@@ -8,6 +8,28 @@ metadata:
   tags: [chicken, salad, food-processor, make-ahead, cold-dish]
   difficulty: Easy
 source_url:
+recipe_table:
+  steps:
+    step: chill 30+ min
+    with:
+      - step: "season, taste"
+        with:
+          - step: fold in a little at a time
+            with:
+              - step: pulse until finely chopped
+                with:
+                  - 3 cooked chicken breasts
+              - step: process until chopped small
+                with:
+                  - 1/2 red onion
+                  - 1 large kosher dill pickle
+                  - about half the mayonnaise
+              - "rest of the 3/4 cup mayonnaise, as needed"
+          - 1/2 tsp kosher salt
+          - 1/4 tsp black pepper
+          - 2 tsp lemon juice
+  after:
+    - No need to wash the processor bowl between the chicken and the onion mixture
 ---
 
 Creamy chopped chicken salad with red onion and kosher dill, made almost entirely in the food processor.
