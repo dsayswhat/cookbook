@@ -4,6 +4,7 @@ const tailwindcss = require("@tailwindcss/postcss");
 const autoprefixer = require("autoprefixer");
 const fs = require("fs");
 const path = require("path");
+const { renderRecipeTable } = require("./lib/recipe-table");
 
 module.exports = function(eleventyConfig) {
   // Add markdown support
@@ -52,6 +53,9 @@ module.exports = function(eleventyConfig) {
     }
     return date ? new Date(date).toLocaleDateString() : new Date().toLocaleDateString();
   });
+
+  // Render a recipe's recipe_table frontmatter as a tabular recipe
+  eleventyConfig.addFilter("recipeTable", renderRecipeTable);
 
   // Add a filter to prepend the path prefix to URLs
   eleventyConfig.addFilter("url", function(urlPath) {

@@ -64,6 +64,16 @@ layout: layouts/base.njk
     </div>
   </header>
 
+  {% set recipe_table = recipe.data.recipe_table if recipe and recipe.data else recipe_table %}
+  {% if recipe_table %}
+    <section class="tabular-recipe-section" aria-label="Recipe at a glance">
+      <h2>At a Glance</h2>
+      <div class="tabular-recipe-scroll">
+        {{ recipe_table | recipeTable | safe }}
+      </div>
+    </section>
+  {% endif %}
+
   <div class="recipe-content">
     {{ content | safe }}
   </div>

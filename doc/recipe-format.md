@@ -38,6 +38,39 @@ source_url: Optional URL or empty
 
 - `source_url`: URL to original recipe source (can be empty string)
 
+### Tabular Recipe (Optional)
+
+`recipe_table` adds an "At a Glance" table above the ingredients and instructions. Ingredients run down the left, and each step is a cell spanning the rows of everything it combines, so the table's shape shows what gets mixed together and when.
+
+```yaml
+recipe_table:
+  before:                      # optional full-width rows above the table
+    - Preheat griddle to 375°F
+  steps:                       # the final step; it nests everything before it
+    step: cook on griddle
+    with:
+      - step: add wet to dry
+        with:
+          - step: mix
+            with:
+              - 1 cup milk     # plain strings are ingredients
+              - 1 egg
+          - step: mix
+            with:
+              - 1 cup flour
+              - 1 tsp baking soda
+      - a little more milk, as needed   # joins at a later step
+  after:                       # optional full-width rows below the table
+    - "¼ cup per pancake; flip when bubbles form"
+```
+
+- Each step has `step` (short text, a few words) and `with` (its inputs: ingredients or earlier steps).
+- Ingredients appear top to bottom in the order they're nested.
+- Steps line up in columns by stage. An input that joins a later step gets a blank cell for the columns it skips.
+- Put longer details in `before`/`after` rows so the step columns stay narrow.
+- Keep the regular Ingredients and Instructions sections as well; the table is an addition.
+- See `src/recipes/sourdough-pancakes.md` for a working example.
+
 ## Content Structure
 
 After the frontmatter, recipes follow this markdown structure:
