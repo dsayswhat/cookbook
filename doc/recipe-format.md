@@ -68,7 +68,7 @@ recipe_table:
 - Ingredients appear top to bottom in the order they're nested.
 - Steps line up in columns by stage. An input that joins a later step gets a blank cell for the columns it skips.
 - Put longer details in `before`/`after` rows so the step columns stay narrow.
-- Keep the regular Ingredients and Instructions sections as well; the table is an addition.
+- Keep the regular Ingredients and Instructions sections as well. Recipes with a table get a **Table / Lists** toggle (`src/js/recipe-view-toggle.js`) that switches between the table and those two sections; Notes and other sections always show. The reader's choice is remembered, and without JavaScript both views show.
 - See `src/recipes/sourdough-pancakes.md` for a working example.
 
 ## Content Structure
