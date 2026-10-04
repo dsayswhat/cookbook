@@ -1,6 +1,14 @@
 ---
 layout: layouts/base.njk
 ---
+{# src/recipe.njk's eleventyComputed values arrive as strings, so read
+   structured recipe data straight from the paginated recipe. #}
+{% if recipe and recipe.data %}
+  {% set metadata = recipe.data.metadata %}
+  {% set timing = recipe.data.timing %}
+  {% set yield = recipe.data.yield %}
+  {% set recipe_table = recipe.data.recipe_table %}
+{% endif %}
 <article class="recipe">
   <header class="recipe-header">
     <div class="recipe-title-row">
@@ -64,7 +72,6 @@ layout: layouts/base.njk
     </div>
   </header>
 
-  {% set recipe_table = recipe.data.recipe_table if recipe and recipe.data else recipe_table %}
   {% if recipe_table %}
     <div id="recipe-view-toggle" class="recipe-view-toggle" role="group" aria-label="Recipe view" hidden>
       <button type="button" data-view="table" aria-pressed="true">Table</button>
